@@ -1,2 +1,1 @@
-# prittjam.github.io
-home page
+# website
