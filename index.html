@@ -17,6 +17,36 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <!-- Bootstrap core JavaScript -->
     <!-- Placed at the end of the document so the pages load faster -->
+
+    <script>
+      function includeHTML() {
+	  var z, i, elmnt, file, xhttp;
+	  /* Loop through a collection of all HTML elements: */
+	  z = document.getElementsByTagName("*");
+	  for (i = 0; i < z.length; i++) {
+	      elmnt = z[i];
+	      /*search for elements with a certain atrribute:*/
+	      file = elmnt.getAttribute("w3-include-html");
+	      if (file) {
+		  /* Make an HTTP request using the attribute value as the file name: */
+		  xhttp = new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+		      if (this.readyState == 4) {
+			  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+			  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+			  /* Remove the attribute, and call this function once more: */
+			  elmnt.removeAttribute("w3-include-html");
+			  includeHTML();
+		      }
+		  }
+		  xhttp.open("GET", file, true);
+		  xhttp.send();
+		  /* Exit the function: */
+		  return;
+	      }
+	  }
+      }
+    </script>
   </head>
   <body>
     <div class="container">
@@ -36,7 +66,7 @@
 	    <a target="_blank" href="mailto:jbpritts@fb.com">
 	      <span class="fa-stack fa-md m-1">
 		<i class="fas fa-circle fa-stack-2x"></i>
-		<i class="fas fa-at fa-stack-1x fa-inverse"></i>	    
+		<i class="fas fa-at fa-stack-1x fa-inverse"></i>
 	      </span>
 	    </a>
 	    <a target="_blank" href="https://www.linkedin.com/in/jbpritts/">
@@ -51,18 +81,18 @@
 	      </span>
 	    </a>
 	    <a target="_blank" href="./doc/pritts_vitae.pdf">
-	      <span class="fa-stack fa-md m-1">	    
+	      <span class="fa-stack fa-md m-1">
 		<i class="ai ai-cv fa-stack-2x"></i>
 	      </span>
 	    </a>
 	    <a target="_blank" href="https://github.com/prittjam">
-	      <span class="fa-stack fa-md m-1">	    
+	      <span class="fa-stack fa-md m-1">
 		<i class="fas fa-circle fa-stack-2x"></i>
 		<i class="fab fa-github fa-inverse fa-stack-1x"></i>
 	      </span>
 	    </a>
 	    <a target="_blank" href="https://twitter.com/prittjam">
-	      <span class="fa-stack fa-md m-1">	    
+	      <span class="fa-stack fa-md m-1">
 		<i class="fas fa-circle fa-stack-2x"></i>
 		<i class="fab fa-twitter fa-inverse fa-stack-1x"></i>
 	      </span>
@@ -72,7 +102,7 @@
       </div>
       <div class="row mt-5">
 	<div class="col-md-12">
-	  <h2>About</h2>	
+	  <h2>About</h2>
 	</div>
       </div>
       <div class="row">
@@ -82,27 +112,27 @@
 	    <a target="_blank"
 	       href="https://research.fb.com/category/augmented-reality-virtual-reality/">Facebook
 	      Reality Labs Research</a> working with <a target="_blank"
-					       href="https://scholar.google.com/citations?user=0Y_LBNIAAAAJ&hl=en">Michal
+							href="https://scholar.google.com/citations?user=0Y_LBNIAAAAJ&hl=en">Michal
 	      Perdoch</a>, where my work focuses on the geometric calibration and
-	    auto-calibration of multi-camera capture systems. I 
+	    auto-calibration of multi-camera capture systems. I
 	    also advise <a target="_blank"
-				   href="https://apps.ucu.edu.ua/en/mllab/">The Machine
+			   href="https://apps.ucu.edu.ua/en/mllab/">The Machine
 	      Learning Lab</a> at <a target="_blank"
 				     href="https://ucu.edu.ua/en/">Ukrainian Catholic
 	      University</a> in Lviv.  Prior I worked
 	    in The <a target="_blank"
-		  href="http://aag.ciirc.cvut.cz/">Applied Algebra and
+		      href="http://aag.ciirc.cvut.cz/">Applied Algebra and
 	      Geometry Group</a> at The <a target="_blank"
-				       href="http://ciirc.cvut.cz/">Czech Institute for
+					   href="http://ciirc.cvut.cz/">Czech Institute for
 	      Informatics, Robotics, and Cybernetics</a> (CIIRC) led
 	    by <a target="_blank"
 		  href="http://people.ciirc.cvut.cz/~pajdla/">Tomas
 	      Pajdla</a>. I obtained my PhD from <a target="_blank"
-	      href="https://www.cvut.cz/en">Czech Technical
+						    href="https://www.cvut.cz/en">Czech Technical
 	      University in Prague</a> under the advisement of <a target="_blank"
-	      href="http://cmp.felk.cvut.cz/~chum/">Ondrej
-	    Chum</a> and <a target="_blank"
-	      href="https://kukelova.weebly.com/">Zuzana Kukelova</a>.
+								  href="http://cmp.felk.cvut.cz/~chum/">Ondrej
+	      Chum</a> and <a target="_blank"
+			      href="https://kukelova.weebly.com/">Zuzana Kukelova</a>.
 	  </p>
 	</div>
       </div>
@@ -129,337 +159,333 @@
 		<div class="card-footer border-0 bg-white py-0 my-0">
 		  <a target="_blank" data-toggle="collapse" data-target="#bibtex8"><i class="pl-3 pr-1 fas fa-file-pdf"></i>pdf</a>
 		  <div id="bibtex8" class="collapse">
-                    <pre><tt>
-			@INPROCEEDINGS{momeni20_spotting,
-			title &nbsp&nbsp&nbsp&nbsp= {Watch, read and lookup: learning to spot signs from multiple supervisors},
-			author &nbsp&nbsp = {Momeni, Liliane and Varol, G{\"u}l and Albanie, Samuel and Afouras, Triantafyllos and Zisserman, Andrew},
-			booktitle = {ACCV},
-			year &nbsp&nbsp&nbsp&nbsp&nbsp= {2020}
-			}</tt>
-		    </pre>
+		    <div w3-include-html="./doc/Pritts-bibtex.html">
+		    </div>
 		  </div>
-		</div>
-		<div class="card-footer border-0 bg-white py-0 my-0">
-		  <span class="pl-3 text-info">coming soon!</span>
+ 		  <div class="card-footer border-0 bg-white py-0 my-0">
+		    <span class="pl-3 text-info">coming soon!</span>
+		  </div>
 		</div>
 	      </div>
 	    </div>
-	  </div>
-	  <div class="card border-0 bg-white mt-2 no-gutters">
-	    <div class="row no-gutters mt-0 py-0">
-	      <div class="col-md-3 my-auto p-3">
-		<img src="./img/papers/Pritts-PAMI20-thumb.jpg"   class="img-fluid" alt="">
-	      </div>
-	      <div class="col-md-9 my-auto pt-0">
-		<div class="card-body py-0">
-		  <h5 class="card-title my-1">Minimal Solvers for Rectifying from Radially-Distorted Conjugate Translations</h5>
-		  <div class="card-text py-0">
-		    <span class="font-weight-bold"> J. Pritts</span>, Z. Kukelova, V. Larsson, Y. Lochman, O. Chum
-		    <br/>IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI) 2020
-		  </div>
+	    <div class="card border-0 bg-white mt-2 no-gutters">
+	      <div class="row no-gutters mt-0 py-0">
+		<div class="col-md-3 my-auto p-3">
+		  <img src="./img/papers/Pritts-PAMI20-thumb.jpg"   class="img-fluid" alt="">
 		</div>
-		<div class="card-footer border-0 bg-white py-0 my-0">
-		  <a target="_blank" href="https://arxiv.org/pdf/1911.01507.pdf"><i class="pl-3 pr-1 fas fa-file-pdf"></i>pdf</a>
-		  <a target="_blank" href="https://docs.google.com/document/d/17_-Gyi1OFKXXy-kkhMY8gRFufGLwtre0NWIMrDzU_G8/edit?usp=sharing"><i class="pl-3 pr-1 ai ai-dblp"></i>bibtex</a>
-		  <a target="_blank" href="https://github.com/prittjam/repeats"><i class="pl-3 pr-1 fas fa-code"></i>code</a>
+		<div class="col-md-9 my-auto pt-0">
+		  <div class="card-body py-0">
+		    <h5 class="card-title my-1">Minimal Solvers for Rectifying from Radially-Distorted Conjugate Translations</h5>
+		    <div class="card-text py-0">
+		      <span class="font-weight-bold"> J. Pritts</span>, Z. Kukelova, V. Larsson, Y. Lochman, O. Chum
+		      <br/>IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI) 2020
+		    </div>
+		  </div>
+		  <div class="card-footer border-0 bg-white py-0 my-0">
+		    <a target="_blank" href="https://arxiv.org/pdf/1911.01507.pdf"><i class="pl-3 pr-1 fas fa-file-pdf"></i>pdf</a>
+		    <a target="_blank" href="https://docs.google.com/document/d/17_-Gyi1OFKXXy-kkhMY8gRFufGLwtre0NWIMrDzU_G8/edit?usp=sharing"><i class="pl-3 pr-1 ai ai-dblp"></i>bibtex</a>
+		    <a target="_blank" href="https://github.com/prittjam/repeats"><i class="pl-3 pr-1 fas fa-code"></i>code</a>
+		  </div>
 		</div>
 	      </div>
 	    </div>
-	  </div>
-	  <div class="card border-0 bg-white mt-2 no-gutters">
-	    <div class="row no-gutters mt-0 py-0">
-	      <div class="col-md-3 my-auto p-3">
-		<img src="./img/papers/Pritts-IJCV20-thumb.jpg"   class="img-fluid" alt="">
-	      </div>
-	      <div class="col-md-9 my-auto pt-0">
-		<div class="card-body py-0">
-		  <h5 class="card-title my-1">Minimal Solvers for Rectifying from Radially-Distorted Scales and Change of Scales</h5>
-		  <div class="card-text py-0">
-		    <span class="font-weight-bold"> J. Pritts</span>, Z. Kukelova, V. Larsson, Y. Lochman, O. Chum
-		    <br/>International Journal of Computer Vision (IJCV) 2020 
-		  </div>
+	    <div class="card border-0 bg-white mt-2 no-gutters">
+	      <div class="row no-gutters mt-0 py-0">
+		<div class="col-md-3 my-auto p-3">
+		  <img src="./img/papers/Pritts-IJCV20-thumb.jpg"   class="img-fluid" alt="">
 		</div>
-		<div class="card-footer border-0 bg-white py-0 my-0">
-		  <a target="_blank" href="https://arxiv.org/pdf/1907.11539.pdf"><i class="pl-3 pr-1 fas fa-file-pdf"></i>pdf</a>
-		  <a target="_blank" href="https://dblp.org/rec/bibtex/journals/ijcv/PrittsKLLC20"><i class="pl-3 pr-1 ai ai-dblp"></i>bibtex</a>
-		  <a target="_blank" href="https://github.com/prittjam/repeats"><i class="pl-3 pr-1 fas fa-code"></i>code</a>
+		<div class="col-md-9 my-auto pt-0">
+		  <div class="card-body py-0">
+		    <h5 class="card-title my-1">Minimal Solvers for Rectifying from Radially-Distorted Scales and Change of Scales</h5>
+		    <div class="card-text py-0">
+		      <span class="font-weight-bold"> J. Pritts</span>, Z. Kukelova, V. Larsson, Y. Lochman, O. Chum
+		      <br/>International Journal of Computer Vision (IJCV) 2020
+		    </div>
+		  </div>
+		  <div class="card-footer border-0 bg-white py-0 my-0">
+		    <a target="_blank" href="https://arxiv.org/pdf/1907.11539.pdf"><i class="pl-3 pr-1 fas fa-file-pdf"></i>pdf</a>
+		    <a target="_blank" href="https://dblp.org/rec/bibtex/journals/ijcv/PrittsKLLC20"><i class="pl-3 pr-1 ai ai-dblp"></i>bibtex</a>
+		    <a target="_blank" href="https://github.com/prittjam/repeats"><i class="pl-3 pr-1 fas fa-code"></i>code</a>
+		  </div>
 		</div>
 	      </div>
 	    </div>
-	  </div>
-	  <div class="card border-0 bg-white mt-2 no-gutters">
-	    <div class="row no-gutters mt-0 py-0">
-	      <div class="col-md-3 my-auto p-3">
-		<img src="./img/papers/Pritts-ACCV18-thumb.jpg"   class="img-fluid" alt="">
-	      </div>
-	      <div class="col-md-9 my-auto pt-0">
-		<div class="card-body py-0">
-		  <h5 class="card-title my-1">Rectification from Radially-Distorted Scales</h5>
-		  <div class="card-text py-0">
-		    <span class="font-weight-bold"> J. Pritts</span>, Z. Kukelova, V. Larsson, O. Chum
-		    <br/>
-		    Asian Conference on Computer Vision (ACCV) 2018
-		    <br/>
-		    <a href="#Award-Pritts-ACCV18" data-toggle="modal" class="text-success"><i class="pr-1 py-2 fas fa-award"></i>Best Paper Award</a>
-		  </div>
+	    <div class="card border-0 bg-white mt-2 no-gutters">
+	      <div class="row no-gutters mt-0 py-0">
+		<div class="col-md-3 my-auto p-3">
+		  <img src="./img/papers/Pritts-ACCV18-thumb.jpg"   class="img-fluid" alt="">
 		</div>
-		<div class="card-footer border-0 bg-white py-0 my-0">
-		  <a target="_blank" href="https://arxiv.org/pdf/1807.06110.pdf"><i class="pl-3 pr-1 fas fa-file-pdf"></i>pdf</a>
-		  <a target="_blank" href="https://dblp.org/rec/bibtex/journals/corr/abs-1807-06110"><i class="pl-3 pr-1 ai ai-dblp"></i>bibtex</a>
-		  <a target="_blank" href="https://github.com/prittjam/repeats"><i class="pl-3 pr-1 fas fa-code"></i>code</a>
+		<div class="col-md-9 my-auto pt-0">
+		  <div class="card-body py-0">
+		    <h5 class="card-title my-1">Rectification from Radially-Distorted Scales</h5>
+		    <div class="card-text py-0">
+		      <span class="font-weight-bold"> J. Pritts</span>, Z. Kukelova, V. Larsson, O. Chum
+		      <br/>
+		      Asian Conference on Computer Vision (ACCV) 2018
+		      <br/>
+		      <a href="#Award-Pritts-ACCV18" data-toggle="modal" class="text-success"><i class="pr-1 py-2 fas fa-award"></i>Best Paper Award</a>
+		    </div>
+		  </div>
+		  <div class="card-footer border-0 bg-white py-0 my-0">
+		    <a target="_blank" href="https://arxiv.org/pdf/1807.06110.pdf"><i class="pl-3 pr-1 fas fa-file-pdf"></i>pdf</a>
+		    <a target="_blank" href="https://dblp.org/rec/bibtex/journals/corr/abs-1807-06110"><i class="pl-3 pr-1 ai ai-dblp"></i>bibtex</a>
+		    <a target="_blank" href="https://github.com/prittjam/repeats"><i class="pl-3 pr-1 fas fa-code"></i>code</a>
+		  </div>
 		</div>
 	      </div>
 	    </div>
-	  </div>
-	  <div class="card border-0 bg-white mt-2 no-gutters">
-	    <div class="row no-gutters mt-0 py-0">
-	      <div class="col-md-3 my-auto p-3">
-		<img src="./img/papers/Pritts-CVPR18-thumb.jpg"   class="img-fluid" alt="">
-	      </div>
-	      <div class="col-md-9 my-auto pt-0">
-		<div class="card-body py-0">
-		  <h5 class="card-title my-1">Radially-Distorted Conjugate Translations</h5>
-		  <div class="card-text py-0">
-		    <span class="font-weight-bold"> J. Pritts</span>, Z. Kukelova, V. Larsson, O. Chum
-		    <br/>Conference on Computer Vision and Pattern Recognition (CVPR) 2018
-		  </div>
+	    <div class="card border-0 bg-white mt-2 no-gutters">
+	      <div class="row no-gutters mt-0 py-0">
+		<div class="col-md-3 my-auto p-3">
+		  <img src="./img/papers/Pritts-CVPR18-thumb.jpg"   class="img-fluid" alt="">
 		</div>
-		<div class="card-footer border-0 bg-white py-0 my-0">
-		  <a target="_blank" href="https://arxiv.org/pdf/1711.11339.pdf"><i class="pl-3 pr-1 fas fa-file-pdf"></i>pdf</a>
-		  <a target="_blank" href="https://dblp.org/rec/conf/cvpr/PrittsKLC18.html?view=bibtex"><i class="pl-3 pr-1 ai ai-dblp"></i>bibtex</a> 
-		  <a target="_blank" href="https://github.com/prittjam/repeats"><i class="pl-3 pr-1 fas fa-code"></i>code</a>
-		  <a target="_blank" href="https://drive.google.com/file/d/179HiQU7alp-8Z8QNS2xjjLqNHEStnA8U/view"><i class="pl-3 pr-1 fas fa-file-image"></i>poster</a>
-		  <a target="_blank" href="https://www.slideshare.net/jbpritts/radiallydistorted-conjugate-translations">
-		    <i class="pl-3 pr-1 fa fa-file-powerpoint-o"></i>slides</a>	      
+		<div class="col-md-9 my-auto pt-0">
+		  <div class="card-body py-0">
+		    <h5 class="card-title my-1">Radially-Distorted Conjugate Translations</h5>
+		    <div class="card-text py-0">
+		      <span class="font-weight-bold"> J. Pritts</span>, Z. Kukelova, V. Larsson, O. Chum
+		      <br/>Conference on Computer Vision and Pattern Recognition (CVPR) 2018
+		    </div>
+		  </div>
+		  <div class="card-footer border-0 bg-white py-0 my-0">
+		    <a target="_blank" href="https://arxiv.org/pdf/1711.11339.pdf"><i class="pl-3 pr-1 fas fa-file-pdf"></i>pdf</a>
+		    <a target="_blank" href="https://dblp.org/rec/conf/cvpr/PrittsKLC18.html?view=bibtex"><i class="pl-3 pr-1 ai ai-dblp"></i>bibtex</a>
+		    <a target="_blank" href="https://github.com/prittjam/repeats"><i class="pl-3 pr-1 fas fa-code"></i>code</a>
+		    <a target="_blank" href="https://drive.google.com/file/d/179HiQU7alp-8Z8QNS2xjjLqNHEStnA8U/view"><i class="pl-3 pr-1 fas fa-file-image"></i>poster</a>
+		    <a target="_blank" href="https://www.slideshare.net/jbpritts/radiallydistorted-conjugate-translations">
+		      <i class="pl-3 pr-1 fa fa-file-powerpoint-o"></i>slides</a>
+		  </div>
 		</div>
 	      </div>
 	    </div>
-	  </div>
-	  <div class="card border-0 bg-white mt-2 no-gutters">
-	    <div class="row no-gutters mt-0 py-0">
-	      <div class="col-md-3 my-auto p-3">
-		<img src="./img/papers/Pritts-BMVC16-thumb.jpg"   class="img-fluid" alt="">
-	      </div>
-	      <div class="col-md-9 my-auto pt-0">
-		<div class="card-body py-0">
-		  <h5 class="card-title my-1">Coplanar Repeats by Energy Minimization</h5>
-		  <div class="card-text py-0">
-		    <span class="font-weight-bold">J. Pritts</span>, D. Rozumnyi, M. P. Kumar, O. Chum
-		    <br/>British Machine Vision Conference (BMVC) 2016
-		  </div>
+	    <div class="card border-0 bg-white mt-2 no-gutters">
+	      <div class="row no-gutters mt-0 py-0">
+		<div class="col-md-3 my-auto p-3">
+		  <img src="./img/papers/Pritts-BMVC16-thumb.jpg"   class="img-fluid" alt="">
 		</div>
-		<div class="card-footer border-0 bg-white py-0 my-0">
-		  <a target="_blank" href="http://arxiv.org/pdf/1711.09432"><i class="pl-3 pr-1 fas fa-file-pdf"></i>pdf</a>
-		  <a target="_blank" href="http://dblp.uni-trier.de/rec/bibtex/conf/bmvc/PrittsRKC16"><i class="pl-3 pr-1 ai ai-dblp"></i>bibtex</a>
-		  <a target="_blank" href="https://goo.gl/txjyMi"><i class="pl-3 pr-1 fas fa-file-image"></i>poster</a>
+		<div class="col-md-9 my-auto pt-0">
+		  <div class="card-body py-0">
+		    <h5 class="card-title my-1">Coplanar Repeats by Energy Minimization</h5>
+		    <div class="card-text py-0">
+		      <span class="font-weight-bold">J. Pritts</span>, D. Rozumnyi, M. P. Kumar, O. Chum
+		      <br/>British Machine Vision Conference (BMVC) 2016
+		    </div>
+		  </div>
+		  <div class="card-footer border-0 bg-white py-0 my-0">
+		    <a target="_blank" href="http://arxiv.org/pdf/1711.09432"><i class="pl-3 pr-1 fas fa-file-pdf"></i>pdf</a>
+		    <a target="_blank" href="http://dblp.uni-trier.de/rec/bibtex/conf/bmvc/PrittsRKC16"><i class="pl-3 pr-1 ai ai-dblp"></i>bibtex</a>
+		    <a target="_blank" href="https://goo.gl/txjyMi"><i class="pl-3 pr-1 fas fa-file-image"></i>poster</a>
+		  </div>
 		</div>
 	      </div>
 	    </div>
-	  </div>
-	  <div class="card border-0 bg-white mt-2 no-gutters">
-	    <div class="row no-gutters mt-0 py-0">
-	      <div class="col-md-3 my-auto p-3">
-		<img src="./img/papers/Pritts-CVPR14-thumb.jpg" class="img-fluid" alt="">
-	      </div>
-	      <div class="col-md-9 my-auto pt-0">
-		<div class="card-body py-0">
-		  <h5 class="card-title my-1">Detection, Rectification and Segmentation of Coplanar Repeated Patterns</h5>
-		  <div class="card-text py-0">
-		    <span class="font-weight-bold">J. Pritts</span>, O. Chum, J. Matas
-		    <br/>Conference on Computer Vision and Pattern Recognition (CVPR) 2014
-		  </div>
+	    <div class="card border-0 bg-white mt-2 no-gutters">
+	      <div class="row no-gutters mt-0 py-0">
+		<div class="col-md-3 my-auto p-3">
+		  <img src="./img/papers/Pritts-CVPR14-thumb.jpg" class="img-fluid" alt="">
 		</div>
-		<div class="card-footer border-0 bg-white py-0 my-0">
-		  <a target="_blank" href="./doc/cvpr14.pdf"><i class="pl-3 pr-1 fas fa-file-pdf"></i>pdf</a>
-		  <a target="_blank" href="https://dblp.uni-trier.de/rec/conf/cvpr/PrittsCM14.html?view=bibtex"><i class="pl-3 pr-1 ai ai-dblp"></i>bibtex</a>
-		  <a target="_blank" href="https://github.com/prittjam/repeats"><i class="pl-3 pr-1 fas fa-code"></i>code</a>
-		  <a target="_blank" href="https://drive.google.com/file/d/1y3VEjWE7xyXsjLhVkx9REvnvowM91K5v/view"><i class="pl-3 pr-1 fas fa-file-image"></i>poster</a>
-<!--		  <a target="_blank" href="http://techtalks.tv/talks/detection-rectification-and-segmentation-of-coplanar-repeated-patterns/59915/"><i class="pl-3 pr-1 fas fa-video"></i>video</a> !-->
+		<div class="col-md-9 my-auto pt-0">
+		  <div class="card-body py-0">
+		    <h5 class="card-title my-1">Detection, Rectification and Segmentation of Coplanar Repeated Patterns</h5>
+		    <div class="card-text py-0">
+		      <span class="font-weight-bold">J. Pritts</span>, O. Chum, J. Matas
+		      <br/>Conference on Computer Vision and Pattern Recognition (CVPR) 2014
+		    </div>
+		  </div>
+		  <div class="card-footer border-0 bg-white py-0 my-0">
+		    <a target="_blank" href="./doc/cvpr14.pdf"><i class="pl-3 pr-1 fas fa-file-pdf"></i>pdf</a>
+		    <a target="_blank" href="https://dblp.uni-trier.de/rec/conf/cvpr/PrittsCM14.html?view=bibtex"><i class="pl-3 pr-1 ai ai-dblp"></i>bibtex</a>
+		    <a target="_blank" href="https://github.com/prittjam/repeats"><i class="pl-3 pr-1 fas fa-code"></i>code</a>
+		    <a target="_blank" href="https://drive.google.com/file/d/1y3VEjWE7xyXsjLhVkx9REvnvowM91K5v/view"><i class="pl-3 pr-1 fas fa-file-image"></i>poster</a>
+		    <!--		  <a target="_blank" href="http://techtalks.tv/talks/detection-rectification-and-segmentation-of-coplanar-repeated-patterns/59915/"><i class="pl-3 pr-1 fas fa-video"></i>video</a> !-->
+		  </div>
 		</div>
 	      </div>
 	    </div>
-	  </div>
-	  <div class="card border-0 bg-white mt-2 no-gutters">
-	    <div class="row no-gutters mt-0 py-0">
-	      <div class="col-md-3 my-auto p-3">
-		<img src="./img/papers/Pritts-IVCVNZ13-thumb.jpg"   class="img-fluid" alt="">
-	      </div>
-	      <div class="col-md-9 my-auto pt-0">
-		<div class="card-body py-0">
-		  <h5 class="card-title mt-0 mb-1 p-0">Approximate Models for Fast and Accurate Epipolar Geometry Estimation</h5>
-		  <div class="card-text py-0">
-		    <span class="font-weight-bold">J. Pritts</span>, O. Chum, J. Matas
-		    <br/>
-		    Image and Vision Computing New Zealand (IVCNZ) 2013
-		    <br/>
-		    <a href="#Award-Pritts-IVCNZ13" data-toggle="modal" class="text-success"><i class="pr-1 py-2 fas fa-award"></i>Best Paper Award</a>
-		  </div>
+	    <div class="card border-0 bg-white mt-2 no-gutters">
+	      <div class="row no-gutters mt-0 py-0">
+		<div class="col-md-3 my-auto p-3">
+		  <img src="./img/papers/Pritts-IVCVNZ13-thumb.jpg"   class="img-fluid" alt="">
 		</div>
-		<div class="card-footer border-0 bg-white py-0">
-		  <a target="_blank" href="./doc/ivcvnz13.pdf"><i class="pl-3 pr-1 fas fa-file-pdf"></i>pdf</a>
-		  <a target="_blank" href="http://dblp.uni-trier.de/rec/bibtex/conf/ivcnz/PrittsCM13"><i class="pl-3 pr-1 ai ai-dblp"></i>bibtex</a>
-		  <a target="_blank" href="https://github.com/prittjam/repeats"><i class="pl-3 pr-1 fas fa-code"></i>code</a>
-		  <a target="_blank" href="https://www.slideshare.net/jbpritts/ivcvnz13">
-		    <i class="pl-3 pr-1 fa fa-file-powerpoint-o"></i>slides</a>
+		<div class="col-md-9 my-auto pt-0">
+		  <div class="card-body py-0">
+		    <h5 class="card-title mt-0 mb-1 p-0">Approximate Models for Fast and Accurate Epipolar Geometry Estimation</h5>
+		    <div class="card-text py-0">
+		      <span class="font-weight-bold">J. Pritts</span>, O. Chum, J. Matas
+		      <br/>
+		      Image and Vision Computing New Zealand (IVCNZ) 2013
+		      <br/>
+		      <a href="#Award-Pritts-IVCNZ13" data-toggle="modal" class="text-success"><i class="pr-1 py-2 fas fa-award"></i>Best Paper Award</a>
+		    </div>
+		  </div>
+		  <div class="card-footer border-0 bg-white py-0">
+		    <a target="_blank" href="./doc/ivcvnz13.pdf"><i class="pl-3 pr-1 fas fa-file-pdf"></i>pdf</a>
+		    <a target="_blank" href="http://dblp.uni-trier.de/rec/bibtex/conf/ivcnz/PrittsCM13"><i class="pl-3 pr-1 ai ai-dblp"></i>bibtex</a>
+		    <a target="_blank" href="https://github.com/prittjam/repeats"><i class="pl-3 pr-1 fas fa-code"></i>code</a>
+		    <a target="_blank" href="https://www.slideshare.net/jbpritts/ivcvnz13">
+		      <i class="pl-3 pr-1 fa fa-file-powerpoint-o"></i>slides</a>
+		  </div>
 		</div>
 	      </div>
 	    </div>
 	  </div>
 	</div>
-      </div>
-      <div class="row mt-5">
+	<div class="row mt-5">
+	  <div class="col-md-12">
+	    <h2>Advising</h2>
+	  </div>
+	</div>
 	<div class="col-md-12">
-	  <h2>Advising</h2>
-	</div>
-      </div>
-      <div class="col-md-12">
-	<div class="card-deck mb-3">
-	  <div class="card border-0 bg-white mt-2 no-gutters">
-	    <div class="row no-gutters mt-0 py-0">
-	      <div class="col-md-3 my-auto p-2 text-center">
-		<img src="./img/people/ylochman.jpg"   class="img-fluid rounded-circle" alt="">
-	      </div>
-	      <div class="col-md-9 my-auto pt-0">
-		<div class="card-body py-0">
-		  <h5 style="display:inline-block;" class="card-title my-1"><a target="_blank" href="https://ylochman.github.io">Yaroslava Lochman</a>, M.Sc.</h5>
-		  <div class="card-text pl-4 py-0">
-		    <span class="font-weight-bold">Thesis:</span> Minimal Solvers for Single-View Auto-Calibration
-		    <br/><span class="text-muted">consulting for Facebook Reality Labs</span>
+	  <div class="card-deck mb-3">
+	    <div class="card border-0 bg-white mt-2 no-gutters">
+	      <div class="row no-gutters mt-0 py-0">
+		<div class="col-md-3 my-auto p-2 text-center">
+		  <img src="./img/people/ylochman.jpg"   class="img-fluid rounded-circle" alt="">
+		</div>
+		<div class="col-md-9 my-auto pt-0">
+		  <div class="card-body py-0">
+		    <h5 style="display:inline-block;" class="card-title my-1"><a target="_blank" href="https://ylochman.github.io">Yaroslava Lochman</a>, M.Sc.</h5>
+		    <div class="card-text pl-4 py-0">
+		      <span class="font-weight-bold">Thesis:</span> Minimal Solvers for Single-View Auto-Calibration
+		      <br/><span class="text-muted">consulting for Facebook Reality Labs</span>
+		    </div>
 		  </div>
 		</div>
 	      </div>
 	    </div>
-	  </div>
-	  <div class="card border-0 bg-white mt-2 no-gutters">
-	    <div class="row no-gutters mt-0 py-0 justify-content-center">
-	      <div class="col-md-3 m-auto p-2 text-center">
-		<img src="./img/people/kliepieshov.jpg"  class="img-fluid rounded-circle" alt="">
-	      </div>
-	      <div class="col-md-9 m-auto pt-0">
-		<div class="card-body py-0">
-		  <h5 style="display:inline-block;" class="card-title my-1"><a target="_blank" href="https://apps.ucu.edu.ua/en/personal/liepieshov/">Kostiantyn Liepieshov</a>, B.Sc.</h5>
-		  <div class="card-text pl-4 py-0">
-		    <span class="font-weight-bold">Thesis:</span> Manhattan Frame Detection in Lens Distorted Images
-		    <br/><span class="text-muted">ML Lab at Ukrainian Catholic University</span>
+	    <div class="card border-0 bg-white mt-2 no-gutters">
+	      <div class="row no-gutters mt-0 py-0 justify-content-center">
+		<div class="col-md-3 m-auto p-2 text-center">
+		  <img src="./img/people/kliepieshov.jpg"  class="img-fluid rounded-circle" alt="">
+		</div>
+		<div class="col-md-9 m-auto pt-0">
+		  <div class="card-body py-0">
+		    <h5 style="display:inline-block;" class="card-title my-1"><a target="_blank" href="https://apps.ucu.edu.ua/en/personal/liepieshov/">Kostiantyn Liepieshov</a>, B.Sc.</h5>
+		    <div class="card-text pl-4 py-0">
+		      <span class="font-weight-bold">Thesis:</span> Manhattan Frame Detection in Lens Distorted Images
+		      <br/><span class="text-muted">ML Lab at Ukrainian Catholic University</span>
+		    </div>
 		  </div>
 		</div>
 	      </div>
 	    </div>
 	  </div>
 	</div>
-      </div>
-      <div class="row mt-5">
+	<div class="row mt-5">
+	  <div class="col-md-12">
+	    <h2>Awards</h2>
+	  </div>
+	</div>
 	<div class="col-md-12">
-	  <h2>Awards</h2>
-	</div>
-      </div>
-      <div class="col-md-12">
-	<div class="card-deck mb-3">
-	  <div class="card border-0 bg-white mt-2 no-gutters">
-	    <div class="row no-gutters mt-0 py-0">
-	      <div class="col-md-3 m-auto p-3 text-center">
-		<a href="#Award-Pritts-ACCV18" data-toggle="modal">
-		  <img src="./img/awards/Award-ACCV18-thumb.jpg" style="max-height:150px" class="img-fluid shadow thumbnail" alt="">
-		</a>
+	  <div class="card-deck mb-3">
+	    <div class="card border-0 bg-white mt-2 no-gutters">
+	      <div class="row no-gutters mt-0 py-0">
+		<div class="col-md-3 m-auto p-3 text-center">
+		  <a href="#Award-Pritts-ACCV18" data-toggle="modal">
+		    <img src="./img/awards/Award-ACCV18-thumb.jpg" style="max-height:150px" class="img-fluid shadow thumbnail" alt="">
+		  </a>
+		</div>
+		<div class="col-md-9 my-auto pt-0">
+		  <div class="card-body py-0">
+		    <h5 class="card-title my-1">ACCV 2018 Saburo Tsuji Best Paper</h5>
+		    <div class="card-text py-0">
+		      <span class="text-muted">Rectification from Radially-Distorted Scales</span>
+		    </div>
+		  </div>
+		</div>
 	      </div>
-	      <div class="col-md-9 my-auto pt-0">
-		<div class="card-body py-0">
-		  <h5 class="card-title my-1">ACCV 2018 Saburo Tsuji Best Paper</h5>
-		  <div class="card-text py-0">
-		    <span class="text-muted">Rectification from Radially-Distorted Scales</span>
+	    </div>
+	    <div class="card border-0 bg-white mt-2 no-gutters  align-self-center">
+	      <div class="row no-gutters mt-0 py-0">
+		<div class="col-md-4 my-auto p-3 text-center">
+		  <a href="#Award-Pritts-IVCVNZ13" data-toggle="modal">
+		    <img src="./img/awards/Award-IVCVNZ13-thumb.jpg" style="max-height:150px"  class="img-fluid shadow thumbnail" alt="">
+		  </a>
+		</div>
+		<div class="col-md-8 my-auto pt-0">
+		  <div class="card-body py-0">
+		    <h5 class="card-title my-1">IVCNZ 2013 Best Paper</h5>
+		    <div class="card-text py-0">
+		      <span class="text-muted">Approximate Models for Fast and Accurate Epipolar Geometry Estimation</span>
+		    </div>
 		  </div>
 		</div>
 	      </div>
 	    </div>
 	  </div>
-	  <div class="card border-0 bg-white mt-2 no-gutters  align-self-center">
-	    <div class="row no-gutters mt-0 py-0">
-	      <div class="col-md-4 my-auto p-3 text-center">
-		<a href="#Award-Pritts-IVCVNZ13" data-toggle="modal">
-		  <img src="./img/awards/Award-IVCVNZ13-thumb.jpg" style="max-height:150px"  class="img-fluid shadow thumbnail" alt="">
-		</a>
-	      </div>
-	      <div class="col-md-8 my-auto pt-0">
-		<div class="card-body py-0">
-		  <h5 class="card-title my-1">IVCNZ 2013 Best Paper</h5>
-		  <div class="card-text py-0">
-		    <span class="text-muted">Approximate Models for Fast and Accurate Epipolar Geometry Estimation</span>
-		  </div>
-		</div>
-	      </div>
+	</div>
+	<div class="row mt-5">
+	  <div class="col-md-12">
+	    <h2>Teaching</h2>
+	  </div>
+	</div>
+	<div class="row">
+	  <div class="col-md-12 mt-2">
+	    <div class="row">
+              <div class="col-sm-3 col-md-3">
+		<h5 class="inline"><span class="badge badge-pill badge-info">&nbsp;&nbsp;2017&nbsp;&mdash;&nbsp;2018&nbsp;&nbsp;</span></h5>
+              </div>
+              <div class="col-sm-9 col-md-9">
+		<a target="_blank" href="http://cs.ucu.edu.ua/en/winterschool/winter-school-2017/">Image Retrieval</a>, Instructor - Master's level, Ukrainian Catholic University
+              </div>
+	    </div>
+	    <div class="row">
+              <div class="col-sm-3 col-md-3">
+		<h5 class="inline"><span class="badge badge-pill badge-secondary">&nbsp;&nbsp;2013&nbsp;&mdash;&nbsp;2016&nbsp;&nbsp;</span></h5>
+              </div>
+              <div class="col-sm-9 col-md-9">
+		<a target="_blank" href="https://www.fel.cvut.cz/en/education/bk/predmety/12/82/p12820204.html">Pattern Recognition and Machine Learning</a>,
+		TA - Bachelor's level, Czech Technical University in Prague
+              </div>
 	    </div>
 	  </div>
 	</div>
-      </div>
-      <div class="row mt-5">
-	<div class="col-md-12">
-	  <h2>Teaching</h2>
-	</div>
-      </div>
-      <div class="row">
-	<div class="col-md-12 mt-2">
-	  <div class="row">
-            <div class="col-sm-3 col-md-3">
-              <h5 class="inline"><span class="badge badge-pill badge-info">&nbsp;&nbsp;2017&nbsp;&mdash;&nbsp;2018&nbsp;&nbsp;</span></h5>
-            </div>
-            <div class="col-sm-9 col-md-9">
-	      <a target="_blank" href="http://cs.ucu.edu.ua/en/winterschool/winter-school-2017/">Image Retrieval</a>, Instructor - Master's level, Ukrainian Catholic University 
-            </div>
-	  </div>
-	  <div class="row">
-            <div class="col-sm-3 col-md-3">
-              <h5 class="inline"><span class="badge badge-pill badge-secondary">&nbsp;&nbsp;2013&nbsp;&mdash;&nbsp;2016&nbsp;&nbsp;</span></h5>
-            </div>
-            <div class="col-sm-9 col-md-9">
-	      <a target="_blank" href="https://www.fel.cvut.cz/en/education/bk/predmety/12/82/p12820204.html">Pattern Recognition and Machine Learning</a>,
-	      TA - Bachelor's level, Czech Technical University in Prague
-            </div>
+	<div class="row p-3">
+	  <div class="col-md-12">
 	  </div>
 	</div>
+	<!-- Footer -->
+	<footer class="page-footer font-small blue">
+	  <!-- Copyright -->
+	  <div class="footer-copyright text-center py-3">
+	    © 2020 Copyright: James Pritts
+	  </div>
+	  <!-- Copyright -->
+	</footer>
       </div>
-      <div class="row p-3">
-	<div class="col-md-12">
-	</div>
-      </div>
-      <!-- Footer -->
-      <footer class="page-footer font-small blue">
-	<!-- Copyright -->
-	<div class="footer-copyright text-center py-3">
-	  © 2020 Copyright: James Pritts
-	</div>
-	<!-- Copyright -->
-      </footer>
-    </div>
 
-    <div class="modal fade bd-example-modal-lg show" id="Award-Pritts-ACCV18" role="dialog">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-	    <h5 class="model-title">ACCV 2018 Saburo Tsuji Best Paper Award</h5>
-            <button type="button" class="close" data-dismiss="modal">
-              <span aria-hidden="true">&times;</span>
-            </button>
+      <div class="modal fade bd-example-modal-lg show" id="Award-Pritts-ACCV18" role="dialog">
+	<div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+	      <h5 class="model-title">ACCV 2018 Saburo Tsuji Best Paper Award</h5>
+              <button type="button" class="close" data-dismiss="modal">
+		<span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body mb-0 p-0">
+              <img src="./img/awards/Award-ACCV18-thumb.jpg" class="img-fluid" style="width:100%" alt="ACCV 2018 Saburo Tsuji Best Paper Award"/>
+            </div>
           </div>
-          <div class="modal-body mb-0 p-0">
-            <img src="./img/awards/Award-ACCV18-thumb.jpg" class="img-fluid" style="width:100%" alt="ACCV 2018 Saburo Tsuji Best Paper Award"/>
-          </div>
-        </div>
+	</div>
       </div>
-    </div>
-    <div class="modal fade bd-example-modal-lg show" id="Award-Pritts-IVCVNZ13" role="dialog">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-	    <h5 class="model-title">IVCNZ 2013 Best Paper Award</h5>
-            <button type="button" class="close" data-dismiss="modal">
-              <span aria-hidden="true">&times;</span>
-            </button>
+      <div class="modal fade bd-example-modal-lg show" id="Award-Pritts-IVCVNZ13" role="dialog">
+	<div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+	      <h5 class="model-title">IVCNZ 2013 Best Paper Award</h5>
+              <button type="button" class="close" data-dismiss="modal">
+		<span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body mb-0 p-0">
+	      <img src="./img/awards/Award-IVCVNZ13-thumb.jpg" class="img-fluid" style="width:100%" alt="IVCVNZ 2013 Best Paper Award"/>
+            </div>
           </div>
-          <div class="modal-body mb-0 p-0">
-	    <img src="./img/awards/Award-IVCVNZ13-thumb.jpg" class="img-fluid" style="width:100%" alt="IVCVNZ 2013 Best Paper Award"/>
-          </div>
-        </div>
+	</div>
       </div>
-    </div>
+      <script>
+	includeHTML();
+      </script>
   </body>
 </html>
