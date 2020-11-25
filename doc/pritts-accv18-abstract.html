@@ -1,0 +1,17 @@
+This paper introduces the first minimal solvers that jointly estimate
+lens distortion and affine rectification from repetitions of
+rigidly-transformed coplanar local features. The proposed solvers
+incorporate lens distortion into the camera model and extend accurate
+rectification to wide-angle images that contain nearly any type of
+coplanar repeated content. We demonstrate a principled approach to
+generating stable minimal solvers by the Gröbner basis method, which
+is accomplished by sampling feasible monomial bases to maximize
+numerical stability. Synthetic and real-image experiments confirm that
+the solvers give accurate rectifications from noisy measurements if
+used in a RANSAC-based estimator. The proposed solvers demonstrate
+superior robustness to noise compared to the state of the art. The
+solvers work on scenes without straight lines and, in general, relax
+strong assumptions about scene content made by the state of the
+art. Accurate rectifications on imagery taken with narrow focal length
+to fisheye lenses demonstrate the wide applicability of the proposed
+method.
