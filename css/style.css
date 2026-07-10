@@ -1,0 +1,352 @@
+/* ===========================================================================
+   James Pritts — academic homepage
+   Hand-written, dependency-free. No Bootstrap, no jQuery, no CDN.
+   =========================================================================== */
+
+:root {
+  --serif: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", Palatino,
+    Charter, Georgia, "Times New Roman", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, "Noto Sans", sans-serif;
+  --mono: "SF Mono", "JetBrains Mono", "Fira Code", ui-monospace, Menlo,
+    Consolas, monospace;
+
+  /* light theme */
+  --bg: #ffffff;
+  --surface: #f7f8fa;
+  --text: #1b1d21;
+  --muted: #6b7280;
+  --border: #e6e8ec;
+  --accent: #2f6690;
+  --accent-soft: rgba(47, 102, 144, 0.1);
+
+  --maxw: 720px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16181d;
+    --surface: #1e2128;
+    --text: #e6e8ec;
+    --muted: #9aa1ac;
+    --border: #2b2f38;
+    --accent: #78aede;
+    --accent-soft: rgba(120, 174, 222, 0.14);
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 16.5px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 24px 96px;
+}
+
+/* ---- links ---- */
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 2px; }
+
+/* ---- navigation ---- */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: saturate(180%) blur(10px);
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+nav .nav-inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 10px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  font-size: 0.9rem;
+}
+nav a {
+  color: var(--muted);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+nav a:hover { color: var(--accent); text-decoration: none; }
+
+/* ---- header ---- */
+header.hero {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 56px 0 8px;
+}
+header.hero img.avatar {
+  width: 132px;
+  height: 132px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+header.hero .name {
+  font-family: var(--serif);
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1.1;
+  margin: 0 0 6px;
+  letter-spacing: -0.01em;
+}
+header.hero .affil {
+  color: var(--muted);
+  font-size: 1.02rem;
+  margin: 0;
+}
+header.hero .affil span { white-space: nowrap; }
+
+/* ---- social row ---- */
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 20px 0 4px;
+}
+.social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  color: var(--muted);
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+.social a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.social svg { width: 19px; height: 19px; display: block; }
+
+/* ---- sections ---- */
+section { margin-top: 52px; }
+h2 {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 18px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  scroll-margin-top: 64px;
+}
+p { margin: 0 0 1em; }
+
+/* ---- news ---- */
+ul.news {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul.news li {
+  display: flex;
+  gap: 16px;
+  padding: 8px 0;
+}
+ul.news .date {
+  flex: 0 0 92px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.92rem;
+  padding-top: 1px;
+}
+ul.news .item { flex: 1; }
+
+/* ---- publications ---- */
+.pub {
+  display: flex;
+  gap: 20px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+}
+.pub:last-child { border-bottom: none; }
+.pub .thumb {
+  flex: 0 0 150px;
+}
+.pub .thumb img {
+  width: 150px;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  display: block;
+}
+.pub .meta { flex: 1; min-width: 0; }
+.pub .title {
+  font-weight: 600;
+  font-size: 1.02rem;
+  margin: 0 0 3px;
+  line-height: 1.35;
+}
+.pub .authors { color: var(--text); font-size: 0.95rem; margin: 0; }
+.pub .venue { color: var(--muted); font-size: 0.92rem; font-style: italic; }
+.pub .me { font-weight: 700; }
+.pub .award {
+  display: inline-block;
+  margin-top: 2px;
+  color: #b5842a;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+@media (prefers-color-scheme: dark) { .pub .award { color: #d9ad5c; } }
+
+/* link row under a paper */
+.links {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  font-size: 0.88rem;
+}
+.links a, .links summary {
+  color: var(--accent);
+  cursor: pointer;
+}
+.links a:hover { text-decoration: underline; }
+
+/* native details for abstract / bibtex — no JS toggle needed */
+details.pub-more { display: contents; }
+details.pub-more > summary {
+  list-style: none;
+  color: var(--accent);
+  font-size: 0.88rem;
+  display: inline;
+}
+details.pub-more > summary::-webkit-details-marker { display: none; }
+details.pub-more > summary::marker { content: ""; }
+details.pub-more[open] > summary { font-weight: 600; }
+.reveal {
+  flex-basis: 100%;
+  margin-top: 8px;
+  padding: 12px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+.reveal pre {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* ---- awards ---- */
+.award-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
+}
+.award-card {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.award-card a { flex: 0 0 auto; }
+.award-card img {
+  width: 96px;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: block;
+}
+.award-card .title { font-weight: 600; font-size: 0.98rem; margin: 0 0 2px; }
+.award-card .sub { color: var(--muted); font-size: 0.9rem; }
+
+/* ---- advising ---- */
+.subhead {
+  font-family: var(--serif);
+  font-size: 1.08rem;
+  font-weight: 600;
+  margin: 26px 0 4px;
+}
+.subhead:first-of-type { margin-top: 4px; }
+.advisee { padding: 12px 0; border-bottom: 1px solid var(--border); }
+.advisee:last-child { border-bottom: none; }
+.advisee .head { font-weight: 600; }
+.advisee .year { color: var(--muted); font-weight: 400; }
+.advisee .degree { font-weight: 600; }
+.advisee .after { color: var(--muted); font-size: 0.92rem; }
+
+/* ---- teaching ---- */
+.course {
+  display: flex;
+  gap: 18px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+.course:last-child { border-bottom: none; }
+.course .years {
+  flex: 0 0 120px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.92rem;
+}
+
+/* ---- footer ---- */
+footer {
+  margin-top: 72px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+/* ---- lightbox (pure CSS via :target) for award images ---- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.82);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 24px;
+}
+.lightbox:target { display: flex; }
+.lightbox img { max-width: 90vw; max-height: 88vh; border-radius: 6px; }
+.lightbox .close {
+  position: absolute;
+  top: 22px;
+  right: 30px;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  text-decoration: none;
+}
+
+/* ---- responsive ---- */
+@media (max-width: 620px) {
+  header.hero { flex-direction: column; text-align: center; gap: 18px; padding-top: 40px; }
+  .social { justify-content: center; }
+  .pub { flex-direction: column; gap: 12px; }
+  .pub .thumb, .pub .thumb img { width: 100%; max-width: 260px; }
+  ul.news li { flex-direction: column; gap: 2px; }
+  ul.news .date { flex-basis: auto; }
+  .course { flex-direction: column; gap: 2px; }
+}
