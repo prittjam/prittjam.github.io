@@ -1,0 +1,37 @@
+# Grouped by degree. Each student: name, optional url (links the name),
+# where (institution + year), thesis, optional after (what they did next).
+- heading: M.Sc. Students
+  students:
+    - name: Till Sittart
+      where: Kiel University, 2026
+      thesis: Affine-Equivariant Blob Targets for Robust Absolute Pose in Robotics
+    - name: Liam Boddin
+      where: Kiel University, 2025
+      thesis: Underwater Calibration of Near-point Anisotropic Lights
+    - name: Igor Babin
+      where: Ukrainian Catholic University, 2024
+      thesis: Image Inpainting in Latent Space
+    - name: Dmytro Nadobko
+      where: Ukrainian Catholic University, 2023
+      thesis: Supervised Learning of Correspondence Volumes for Coplanar Repetitive Patterns
+    - name: Andrii Stadnik
+      where: Ukrainian Catholic University, 2023
+      thesis: Corner Localization and Camera Calibration from Imaged Lattices
+    - name: Yaroslava Lochman
+      url: https://ylochman.github.io
+      where: Ukrainian Catholic University, 2020
+      thesis: Minimal Solvers for Single-View Auto-Calibration
+      after: moved on as Ph.D. student at Chalmers University of Technology
+- heading: B.Sc. Students
+  students:
+    - name: Yaroslav Romanus
+      where: Ukrainian Catholic University, 2024
+      thesis: Applying Motion in Latent Space
+    - name: Ostap Viniavskyi
+      where: Ukrainian Catholic University, 2021
+      thesis: Learning Discriminative Context-Aware Keypoints Representations for Resolving Ambiguous Matches
+      after: moved on as Researcher at The ML Lab at Ukrainian Catholic University
+    - name: Kostiantyn Liepieshov
+      where: Ukrainian Catholic University, 2021
+      thesis: Manhattan-Frame Detection in Lens-Distorted Images
+      after: moved on as M.Sc. student at Ukrainian Catholic University

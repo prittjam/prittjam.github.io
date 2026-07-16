@@ -1,0 +1,9 @@
+# Identity shown in the hero header.
+name: James Pritts
+me: J. Pritts          # this name is highlighted wherever it appears in author lists
+avatar: ./me.png
+avatar_width: 304
+avatar_height: 280
+affiliation:
+  - CAU Kiel
+  - Marie Skłodowska-Curie (MSCA) Fellow

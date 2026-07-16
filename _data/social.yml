@@ -1,0 +1,23 @@
+# Social / profile links in the hero. `key` selects the icon (see
+# _includes/social-icon.html); order here is the order shown.
+- key: email
+  href: mailto:jpr@informatik.uni-kiel.de
+  title: Email
+- key: scholar
+  href: https://scholar.google.com/citations?user=fvTKAEUAAAAJ&hl=en&oi=ao
+  title: Google Scholar
+- key: orcid
+  href: https://orcid.org/0000-0001-6533-8975
+  title: ORCID
+- key: github
+  href: https://github.com/prittjam
+  title: GitHub
+- key: linkedin
+  href: https://www.linkedin.com/in/jbpritts/
+  title: LinkedIn
+- key: twitter
+  href: https://twitter.com/prittjam
+  title: X / Twitter
+- key: cv
+  href: ./doc/pritts_vitae.pdf
+  title: Curriculum Vitae

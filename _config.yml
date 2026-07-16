@@ -1,0 +1,17 @@
+title: James Pritts
+description: >-
+  James Pritts — Marie Skłodowska-Curie (MSCA) Fellow at CAU Kiel. Research in
+  robust geometric estimation for computer vision: RANSAC, camera calibration,
+  and multi-view geometry.
+lang: en
+
+# Content lives in _data/*.yml and _includes/about.md; presentation lives in
+# _layouts/ and _includes/. GitHub Pages rebuilds the static site on push.
+exclude:
+  - README.md
+  - rm_backups.sh
+  - gen_pubs.py
+  - scratchpad
+  - Gemfile
+  - Gemfile.lock
+  - vendor

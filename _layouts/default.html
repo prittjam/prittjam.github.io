@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-inner">
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#publications">Publications</a>
+        <a href="#awards">Awards</a>
+        <a href="#advising">Advising</a>
+        <a href="#teaching">Teaching</a>
+      </div>
+    </nav>
+
+    <div class="wrap">
+{{ content }}
+      <footer>
+        &copy; {{ site.time | date: '%Y' }} {{ site.data.profile.name }}
+      </footer>
+    </div>
+
+    <!-- ============ AWARD LIGHTBOXES (pure CSS :target) ============ -->
+    {%- for a in site.data.awards %}
+    <a href="#" class="lightbox" id="{{ a.lightbox }}">
+      <span class="close">&times;</span>
+      <img src="{{ a.image }}" alt="{{ a.alt }}" width="{{ a.width }}" height="{{ a.height }}" loading="lazy">
+    </a>
+    {%- endfor %}
+  </body>
+</html>

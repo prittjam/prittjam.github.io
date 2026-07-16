@@ -1,0 +1,11 @@
+# Newest first. `item` may contain inline HTML (<em>, <strong>, <a>).
+- date: Jun 2026
+  item: 'New preprint: <em>RANSAC Scoring Done Right</em> is on <a href="https://arxiv.org/abs/2606.27385" target="_blank" rel="noopener">arXiv</a>.'
+- date: Jun 2026
+  item: 'Till Sittart completed his M.Sc. thesis, <em>Affine-Equivariant Blob Targets for Robust Absolute Pose in Robotics</em>.'
+- date: Dec 2025
+  item: 'Awarded €10,000 from <strong>Kiel Marine Science (KMS)</strong> for <em>Enhancing Underwater Robotics for Visual Mapping in Turbid Environments</em>.'
+- date: Nov 2025
+  item: 'Liam Boddin completed his M.Sc. thesis, <em>Underwater Calibration of Near-point Anisotropic Lights</em>.'
+- date: Sep 2024
+  item: 'Joined CAU Kiel as a <strong>Marie Skłodowska-Curie (MSCA) Fellow</strong>.'

@@ -1,0 +1,16 @@
+# Each award renders a card in the Awards grid and a click-to-zoom lightbox.
+# `lightbox` is the id linked from the card and from a publication's award ribbon.
+- lightbox: lightbox-accv18
+  image: ./img/awards/Award-ACCV18-thumb.jpg
+  alt: ACCV 2018 Saburo Tsuji Best Paper Award
+  width: 260
+  height: 360
+  title: ACCV 2018 Saburo Tsuji Best Paper
+  sub: Rectification from Radially-Distorted Scales
+- lightbox: lightbox-ivcnz13
+  image: ./img/awards/Award-IVCVNZ13-thumb.jpg
+  alt: IVCNZ 2013 Best Paper Award
+  width: 1085
+  height: 866
+  title: IVCNZ 2013 Best Paper
+  sub: Approximate Models for Fast and Accurate Epipolar Geometry Estimation

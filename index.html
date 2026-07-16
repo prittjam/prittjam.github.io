@@ -1,57 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>James Pritts</title>
-    <meta name="description" content="James Pritts — Marie Skłodowska-Curie (MSCA) Fellow at CAU Kiel. Research in robust geometric estimation for computer vision: RANSAC, camera calibration, and multi-view geometry.">
-    <link rel="stylesheet" href="./css/style.css">
-  </head>
-
-  <body>
-    <nav>
-      <div class="nav-inner">
-        <a href="#about">About</a>
-        <a href="#news">News</a>
-        <a href="#publications">Publications</a>
-        <a href="#awards">Awards</a>
-        <a href="#advising">Advising</a>
-        <a href="#teaching">Teaching</a>
-      </div>
-    </nav>
-
-    <div class="wrap">
+---
+layout: default
+---
       <!-- ================= HEADER ================= -->
       <header class="hero">
-        <img class="avatar" src="./me.png" alt="James Pritts" width="304" height="280">
+        <img class="avatar" src="{{ site.data.profile.avatar }}" alt="{{ site.data.profile.name }}" width="{{ site.data.profile.avatar_width }}" height="{{ site.data.profile.avatar_height }}">
         <div>
-          <h1 class="name">James Pritts</h1>
+          <h1 class="name">{{ site.data.profile.name }}</h1>
           <p class="affil">
-            <span>CAU Kiel</span> &middot; <span>Marie Sk&#322;odowska-Curie (MSCA) Fellow</span>
+            {%- for a in site.data.profile.affiliation -%}
+            <span>{{ a }}</span>{% unless forloop.last %} &middot; {% endunless %}
+            {%- endfor %}
           </p>
 
           <div class="social">
-            <a href="mailto:jpr@informatik.uni-kiel.de" title="Email" aria-label="Email">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </a>
-            <a href="https://scholar.google.com/citations?user=fvTKAEUAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener" title="Google Scholar" aria-label="Google Scholar">
-              <svg viewBox="0 0 384 512" fill="currentColor"><path d="M343.759 106.662V79.43L363.524 64H149.634L20.476 176.274h85.656c-.155 2.125-.219 4.046-.219 6.226 0 20.845 7.219 38.087 21.672 51.861 14.453 13.797 32.251 20.648 53.327 20.648 4.923 0 9.751-.368 14.438-1.024-2.907 6.501-4.375 12.523-4.375 18.142 0 9.875 4.499 20.43 13.467 31.642-39.234 2.671-68.061 9.733-86.437 21.163-10.531 6.499-19 14.704-25.39 24.531-6.391 9.899-9.578 20.515-9.578 31.962 0 9.648 2.062 18.336 6.219 26.062 4.157 7.726 9.578 14.07 16.312 18.984 6.718 4.968 14.469 9.101 23.219 12.469 8.734 3.344 17.406 5.719 26.061 7.063 8.627 1.342 17.205 1.998 25.706 1.998 13.469 0 26.954-1.734 40.547-5.187 13.562-3.485 26.28-8.641 38.171-15.493 11.859-6.805 21.515-16.086 28.922-27.718 7.39-11.68 11.094-24.805 11.094-39.336 0-11.016-2.25-21.039-6.75-30.141-4.469-9.072-9.938-16.541-16.453-22.344-6.501-5.813-13-11.155-19.515-15.968-6.501-4.845-12-9.751-16.469-14.813-4.485-5.047-6.734-10.054-6.734-14.984 0-4.921 1.734-9.672 5.216-14.266 3.455-4.609 7.674-9.048 12.61-13.306 4.937-4.249 9.875-8.968 14.796-14.133 4.922-5.147 9.141-11.827 12.61-20.008 3.485-8.179 5.203-17.445 5.203-27.757 0-13.453-2.547-24.461-7.547-33.313-.594-1.022-1.218-1.803-1.875-3.022l56.907-46.672v17.118c-7.394.93-6.624 5.346-6.624 10.635v128.667c0 5.958 4.875 10.834 10.834 10.834h3.989c5.958 0 10.834-4.875 10.834-10.834V117.293c0-5.277.777-9.688-6.562-10.63zM236.399 329.141c1.141.75 3.704 2.781 7.718 6.038 4.05 3.243 6.797 5.696 8.266 7.414 1.439 1.664 3.579 4.165 6.376 7.548 2.813 3.374 4.718 6.304 5.719 8.734 1 2.477 2.016 5.461 3.046 8.946.986 3.445 1.485 6.976 1.485 10.562 0 17.048-6.563 29.68-19.656 37.859-13.125 8.181-28.767 12.274-46.938 12.274-9.187 0-18.203-1.093-27.062-3.195-8.843-2.117-17.312-5.336-25.39-9.602-8.079-4.258-14.578-10.203-19.501-17.797-4.938-7.64-7.406-16.415-7.406-26.25 0-10.32 2.797-19.29 8.422-26.906 5.593-7.626 12.938-13.392 22.032-17.315 9.062-3.946 18.249-6.742 27.562-8.398 9.312-1.702 18.797-2.555 28.438-2.555 4.469 0 7.936.251 10.405.696.454.219 3.032 2.07 7.734 5.563 4.704 3.462 7.626 5.595 8.75 6.384zm-3.358-100.578c-7.406 8.859-17.735 13.288-30.954 13.288-11.859 0-22.298-4.765-31.266-14.312-9-9.523-15.422-20.328-19.344-32.431-3.938-12.109-5.906-23.984-5.906-35.648 0-13.694 3.595-25.352 10.781-34.976 7.187-9.65 17.499-14.485 30.938-14.485 11.875 0 22.374 5.038 31.437 15.157 9.094 10.085 15.61 21.413 19.517 33.968 3.922 12.539 5.873 24.53 5.873 35.984 0 13.447-3.702 24.61-11.076 33.455z"/></svg>
-            </a>
-            <a href="https://orcid.org/0000-0001-6533-8975" target="_blank" rel="noopener" title="ORCID" aria-label="ORCID">
-              <svg viewBox="0 0 24 24"><text x="12" y="19" text-anchor="middle" font-family="var(--serif)" font-size="22" font-weight="700" fill="currentColor">iD</text></svg>
-            </a>
-            <a href="https://github.com/prittjam" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-            </a>
-            <a href="https://www.linkedin.com/in/jbpritts/" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-            </a>
-            <a href="https://twitter.com/prittjam" target="_blank" rel="noopener" title="X / Twitter" aria-label="X / Twitter">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            </a>
-            <a href="./doc/pritts_vitae.pdf" target="_blank" rel="noopener" title="Curriculum Vitae" aria-label="Curriculum Vitae">
-              <svg viewBox="0 0 512 512" fill="currentColor"><path d="M249.18 328.324c-9.788 15.384-19.179 30.434-40.221 45.055-11.257 7.891-37.165 23.306-73.991 23.306C64.708 396.685 8 345.605 8 255.8 8 177.315 61.345 115.314 136.466 115.314c30.434 0 57.474 10.522 77.387 26.305 18.414 14.65 27.038 29.303 34.563 42.456l-52.58 26.273c-3.762-8.626-8.29-17.649-19.913-27.406-12.784-10.155-25.54-13.152-36.46-13.152-42.821 0-65.364 39.825-65.364 84.145 0 58.238 29.7 87.143 65.364 87.143 34.563 0 48.48-24.042 57.474-39.426l52.243 26.672zM433.374 123.573H504l-92.037 265.222h-67.596L253.462 123.573h70.624l54.844 188.6 54.844-188.6z"/></svg>
-            </a>
+            {%- for s in site.data.social %}
+            <a href="{{ s.href }}"{% unless s.key == 'email' %} target="_blank" rel="noopener"{% endunless %} title="{{ s.title }}" aria-label="{{ s.title }}">{% include social-icon.html key=s.key %}</a>
+            {%- endfor %}
           </div>
         </div>
       </header>
@@ -59,368 +23,69 @@
       <!-- ================= ABOUT ================= -->
       <section id="about">
         <h2>About</h2>
-        <p>
-          James Pritts is a Marie Sk&#322;odowska-Curie Actions Fellow in the Marine Data
-          Science group at Kiel University&rsquo;s Institute of Computer Science. His research
-          focuses on robust geometric estimation for computer vision, including RANSAC-based
-          model fitting, camera calibration, and multi-view geometry, with applications
-          ranging from conventional imagery to challenging underwater environments.
-        </p>
-        <p>
-          Before joining Kiel University, he was an Assistant Professor at Ukrainian Catholic
-          University, where he conducted research in 3D computer vision and helped establish
-          the Ph.D. program in Applied Sciences. He previously worked at the Czech Institute
-          of Informatics, Robotics and Cybernetics and at Facebook Reality Labs, where he
-          developed geometric calibration methods for head-mounted capture systems.
-        </p>
-        <p>
-          His work has received the ACCV 2018 Saburo Tsuji Best Paper Award and the IVCNZ
-          2013 Best Paper Award. He is also a member of the European Laboratory for Learning
-          and Intelligent Systems. Earlier in his career, he served as Lead Engineer at BAE
-          Systems on DARPA-funded computer-vision projects and as a research fellow at NASA,
-          where he developed prototype gesture-recognition software for the International
-          Space Station.
-        </p>
+        {%- capture about %}{% include about.md %}{% endcapture -%}
+        {{ about | markdownify }}
       </section>
 
-      <!-- ================= NEWS =================
-           Add newest items at the TOP. Format: date on the left, item on the right.
-           These are starter entries — edit / add your own.                         -->
+      <!-- ================= NEWS ================= -->
       <section id="news">
         <h2>News</h2>
         <ul class="news">
+          {%- for n in site.data.news %}
           <li>
-            <span class="date">Jun 2026</span>
-            <span class="item">New preprint: <em>RANSAC Scoring Done Right</em> is on <a href="https://arxiv.org/abs/2606.27385" target="_blank" rel="noopener">arXiv</a>.</span>
+            <span class="date">{{ n.date }}</span>
+            <span class="item">{{ n.item }}</span>
           </li>
-          <li>
-            <span class="date">Jun 2026</span>
-            <span class="item">Till Sittart completed his M.Sc. thesis, <em>Affine-Equivariant Blob Targets for Robust Absolute Pose in Robotics</em>.</span>
-          </li>
-          <li>
-            <span class="date">Dec 2025</span>
-            <span class="item">Awarded &euro;10,000 from <strong>Kiel Marine Science (KMS)</strong> for <em>Enhancing Underwater Robotics for Visual Mapping in Turbid Environments</em>.</span>
-          </li>
-          <li>
-            <span class="date">Nov 2025</span>
-            <span class="item">Liam Boddin completed his M.Sc. thesis, <em>Underwater Calibration of Near-point Anisotropic Lights</em>.</span>
-          </li>
-          <li>
-            <span class="date">Sep 2024</span>
-            <span class="item">Joined CAU Kiel as a <strong>Marie Sk&#322;odowska-Curie (MSCA) Fellow</strong>.</span>
-          </li>
+          {%- endfor %}
         </ul>
       </section>
 
       <!-- ================= PUBLICATIONS ================= -->
       <section id="publications">
         <h2>Publications</h2>
-
-        <!-- Pritts RANSAC Scoring Done Right (arXiv 2026) -->
-        <div class="pub">
-          <div class="thumb"><img src="./img/papers/Pritts-arXiv26-thumb.jpg" alt="RANSAC Scoring Done Right — profile curves" width="640" height="360" loading="lazy"></div>
-          <div class="meta">
-            <p class="title">RANSAC Scoring Done Right</p>
-            <p class="authors"><span class="me">J. Pritts</span>, F. Seegr&auml;ber, K. K&ouml;ser</p>
-            <p class="venue">arXiv preprint arXiv:2606.27385, 2026</p>
-            <div class="links">
-              <a href="https://arxiv.org/pdf/2606.27385" target="_blank" rel="noopener">pdf</a>
-              <a href="https://arxiv.org/abs/2606.27385" target="_blank" rel="noopener">arXiv</a>
-              <details class="pub-more"><summary>abstract</summary><div class="reveal">The most widely used RANSAC variants score candidate models by counting inliers or summing per-point scores that saturate beyond a residual threshold. Every such score requires a user-supplied parameter that is a function of the inlier scale, which must itself be estimated from contaminated data. We remove this dependence by reversing the usual order of inference: rather than estimating the scale and then scoring against it, we marginalize the inlier scale analytically in closed form under a conjugate Inverse-Gamma prior for a fixed inlier partition, then optimize over partitions. A single closed-form expression spans the non-informative Jeffreys limit and informative empirical-Bayes priors, so the same score adapts across data-rich and data-scarce regimes without any change to the algorithm. The proposed RANSAC score is the first in which the inlier scale is genuinely absent from the formula. The score admits O(N log N) computation via sort-and-sweep. On a benchmark of nearly 70,000 image pairs spanning different two-view estimation problems and both engineered and learned feature pipelines, the proposed score exceeds the state of the art (RANSAC, MSAC, GaU, MAGSAC): it stays nearly flat under threshold miscalibration where baselines degrade, reaches near-optimal accuracy from as few as two validation pairs where baselines need on the order of 100 times more, and tightens its prior regularization as validation data grows scarce.</div></details>
-              <details class="pub-more"><summary>bibtex</summary><div class="reveal"><pre>@article{pritts2026ransac,
-  title   = {RANSAC Scoring Done Right},
-  author  = {Pritts, James and Seegr{\"a}ber, Felix and K{\"o}ser, Kevin},
-  journal = {arXiv preprint arXiv:2606.27385},
-  year    = {2026}
-}</pre></div></details>
-            </div>
-          </div>
-        </div>
-
-        <!-- Dexheimer ICRA22 -->
-        <div class="pub">
-          <div class="thumb"><img src="./img/papers/Dexheimer-ICRA22-thumb.jpg" alt="" width="1311" height="765" loading="lazy"></div>
-          <div class="meta">
-            <p class="title">Information-Theoretic Online Multi-Camera Extrinsic Calibration</p>
-            <p class="authors">E. Dexheimer, P. Peluse, J. Chen, <span class="me">J. Pritts</span>, and M. Kaess</p>
-            <p class="venue">IEEE Robotics and Automation Letters, 2022</p>
-            <div class="links">
-              <a href="doc/dexheimer-icra22.pdf" target="_blank" rel="noopener">pdf</a>
-              <a href="https://github.com/edexheim/info_ext_calib" target="_blank" rel="noopener">code</a>
-              <details class="pub-more"><summary>abstract</summary><div class="reveal"><span w3-include-html="doc/dexheimer-icra22-abstract.html"></span></div></details>
-              <details class="pub-more"><summary>bibtex</summary><div class="reveal"><pre w3-include-html="doc/dexheimer-icra22-bibtex.html"></pre></div></details>
-            </div>
-          </div>
-        </div>
-
-        <!-- Lochman ICCV21 -->
-        <div class="pub">
-          <div class="thumb"><img src="./img/papers/Lochman-ICCV21-thumb.jpg" alt="" width="640" height="360" loading="lazy"></div>
-          <div class="meta">
-            <p class="title">BabelCalib: A Universal Approach to Calibrating Central Cameras</p>
-            <p class="authors">Y. Lochman, K. Liepieshov, J. Chen, M. Perdoch, C. Zach, <span class="me">J. Pritts</span></p>
-            <p class="venue">International Conference on Computer Vision (ICCV) 2021</p>
-            <div class="links">
-              <a href="https://arxiv.org/pdf/2109.09704.pdf" target="_blank" rel="noopener">pdf</a>
-              <a href="https://github.com/ylochman/babelcalib" target="_blank" rel="noopener">code</a>
-              <details class="pub-more"><summary>abstract</summary><div class="reveal"><span w3-include-html="doc/lochman-iccv21-abstract.html"></span></div></details>
-              <details class="pub-more"><summary>bibtex</summary><div class="reveal"><pre w3-include-html="doc/lochman-iccv21-bibtex.html"></pre></div></details>
-            </div>
-          </div>
-        </div>
-
-        <!-- Lochman WACV21 -->
-        <div class="pub">
-          <div class="thumb"><img src="./img/papers/Lochman-WACV21-thumb.jpg" alt="" width="640" height="360" loading="lazy"></div>
-          <div class="meta">
-            <p class="title">Minimal Solvers for Single-View Lens-Distorted Camera Auto-Calibration</p>
-            <p class="authors">Y. Lochman, O. Dobosevych, R. Hyrniv, <span class="me">J. Pritts</span></p>
-            <p class="venue">Winter Conference on Applications of Computer Vision (WACV) 2021</p>
-            <div class="links">
-              <a href="https://arxiv.org/pdf/2011.08988.pdf" target="_blank" rel="noopener">pdf</a>
-              <a href="https://github.com/ucuapps/single-view-autocalib" target="_blank" rel="noopener">code</a>
-              <details class="pub-more"><summary>abstract</summary><div class="reveal"><span w3-include-html="doc/lochman-wacv21-abstract.html"></span></div></details>
-              <details class="pub-more"><summary>bibtex</summary><div class="reveal"><pre w3-include-html="doc/lochman-wacv21-bibtex.html"></pre></div></details>
-            </div>
-          </div>
-        </div>
-
-        <!-- Pritts PAMI21 -->
-        <div class="pub">
-          <div class="thumb"><img src="./img/papers/Pritts-PAMI21-thumb.jpg" alt="" width="640" height="360" loading="lazy"></div>
-          <div class="meta">
-            <p class="title">Minimal Solvers for Rectifying from Radially-Distorted Conjugate Translations</p>
-            <p class="authors"><span class="me">J. Pritts</span>, Z. Kukelova, V. Larsson, Y. Lochman, O. Chum</p>
-            <p class="venue">IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI) 2021</p>
-            <div class="links">
-              <a href="https://arxiv.org/pdf/1911.01507.pdf" target="_blank" rel="noopener">pdf</a>
-              <a href="https://github.com/prittjam/repeats" target="_blank" rel="noopener">code</a>
-              <details class="pub-more"><summary>abstract</summary><div class="reveal"><span w3-include-html="doc/pritts-pami21-abstract.html"></span></div></details>
-              <details class="pub-more"><summary>bibtex</summary><div class="reveal"><pre w3-include-html="doc/pritts-pami21-bibtex.html"></pre></div></details>
-            </div>
-          </div>
-        </div>
-
-        <!-- Pritts IJCV20 -->
-        <div class="pub">
-          <div class="thumb"><img src="./img/papers/Pritts-IJCV20-thumb.jpg" alt="" width="640" height="360" loading="lazy"></div>
-          <div class="meta">
-            <p class="title">Minimal Solvers for Rectifying from Radially-Distorted Scales and Change of Scales</p>
-            <p class="authors"><span class="me">J. Pritts</span>, Z. Kukelova, V. Larsson, Y. Lochman, O. Chum</p>
-            <p class="venue">International Journal of Computer Vision (IJCV) 2020</p>
-            <div class="links">
-              <a href="https://arxiv.org/pdf/1907.11539.pdf" target="_blank" rel="noopener">pdf</a>
-              <a href="https://github.com/prittjam/repeats" target="_blank" rel="noopener">code</a>
-              <details class="pub-more"><summary>abstract</summary><div class="reveal"><span w3-include-html="doc/pritts-ijcv20-abstract.html"></span></div></details>
-              <details class="pub-more"><summary>bibtex</summary><div class="reveal"><pre w3-include-html="doc/pritts-ijcv20-bibtex.html"></pre></div></details>
-            </div>
-          </div>
-        </div>
-
-        <!-- Pritts ACCV18 -->
-        <div class="pub">
-          <div class="thumb"><img src="./img/papers/Pritts-ACCV18-thumb.jpg" alt="" width="640" height="360" loading="lazy"></div>
-          <div class="meta">
-            <p class="title">Rectification from Radially-Distorted Scales</p>
-            <p class="authors"><span class="me">J. Pritts</span>, Z. Kukelova, V. Larsson, O. Chum</p>
-            <p class="venue">Asian Conference on Computer Vision (ACCV) 2018</p>
-            <a class="award" href="#lightbox-accv18">&#9733; Best Paper Award</a>
-            <div class="links">
-              <a href="https://arxiv.org/pdf/1807.06110.pdf" target="_blank" rel="noopener">pdf</a>
-              <a href="https://github.com/prittjam/repeats" target="_blank" rel="noopener">code</a>
-              <details class="pub-more"><summary>abstract</summary><div class="reveal"><span w3-include-html="doc/pritts-accv18-abstract.html"></span></div></details>
-              <details class="pub-more"><summary>bibtex</summary><div class="reveal"><pre w3-include-html="doc/pritts-accv18-bibtex.html"></pre></div></details>
-            </div>
-          </div>
-        </div>
-
-        <!-- Pritts CVPR18 -->
-        <div class="pub">
-          <div class="thumb"><img src="./img/papers/Pritts-CVPR18-thumb.jpg" alt="" width="640" height="360" loading="lazy"></div>
-          <div class="meta">
-            <p class="title">Radially-Distorted Conjugate Translations</p>
-            <p class="authors"><span class="me">J. Pritts</span>, Z. Kukelova, V. Larsson, O. Chum</p>
-            <p class="venue">Conference on Computer Vision and Pattern Recognition (CVPR) 2018</p>
-            <div class="links">
-              <a href="https://arxiv.org/pdf/1711.11339.pdf" target="_blank" rel="noopener">pdf</a>
-              <a href="https://github.com/prittjam/repeats" target="_blank" rel="noopener">code</a>
-              <a href="https://www.slideshare.net/jbpritts/radiallydistorted-conjugate-translations" target="_blank" rel="noopener">slides</a>
-              <a href="https://drive.google.com/file/d/179HiQU7alp-8Z8QNS2xjjLqNHEStnA8U/view" target="_blank" rel="noopener">poster</a>
-              <details class="pub-more"><summary>abstract</summary><div class="reveal"><span w3-include-html="doc/pritts-cvpr18-abstract.html"></span></div></details>
-              <details class="pub-more"><summary>bibtex</summary><div class="reveal"><pre w3-include-html="doc/pritts-cvpr18-bibtex.html"></pre></div></details>
-            </div>
-          </div>
-        </div>
-
-        <!-- Pritts BMVC16 -->
-        <div class="pub">
-          <div class="thumb"><img src="./img/papers/Pritts-BMVC16-thumb.jpg" alt="" width="640" height="360" loading="lazy"></div>
-          <div class="meta">
-            <p class="title">Coplanar Repeats by Energy Minimization</p>
-            <p class="authors"><span class="me">J. Pritts</span>, D. Rozumnyi, M. P. Kumar, O. Chum</p>
-            <p class="venue">British Machine Vision Conference (BMVC) 2016</p>
-            <div class="links">
-              <a href="http://arxiv.org/pdf/1711.09432" target="_blank" rel="noopener">pdf</a>
-              <a href="https://goo.gl/txjyMi" target="_blank" rel="noopener">poster</a>
-              <details class="pub-more"><summary>abstract</summary><div class="reveal"><span w3-include-html="doc/pritts-bmvc16-abstract.html"></span></div></details>
-              <details class="pub-more"><summary>bibtex</summary><div class="reveal"><pre w3-include-html="doc/pritts-bmvc16-bibtex.html"></pre></div></details>
-            </div>
-          </div>
-        </div>
-
-        <!-- Pritts CVPR14 -->
-        <div class="pub">
-          <div class="thumb"><img src="./img/papers/Pritts-CVPR14-thumb.jpg" alt="" width="640" height="360" loading="lazy"></div>
-          <div class="meta">
-            <p class="title">Detection, Rectification and Segmentation of Coplanar Repeated Patterns</p>
-            <p class="authors"><span class="me">J. Pritts</span>, O. Chum, J. Matas</p>
-            <p class="venue">Conference on Computer Vision and Pattern Recognition (CVPR) 2014</p>
-            <div class="links">
-              <a href="./doc/cvpr14.pdf" target="_blank" rel="noopener">pdf</a>
-              <a href="https://github.com/prittjam/repeats" target="_blank" rel="noopener">code</a>
-              <a href="https://drive.google.com/file/d/1y3VEjWE7xyXsjLhVkx9REvnvowM91K5v/view" target="_blank" rel="noopener">poster</a>
-              <details class="pub-more"><summary>abstract</summary><div class="reveal"><span w3-include-html="doc/pritts-cvpr14-abstract.html"></span></div></details>
-              <details class="pub-more"><summary>bibtex</summary><div class="reveal"><pre w3-include-html="doc/pritts-cvpr14-bibtex.html"></pre></div></details>
-            </div>
-          </div>
-        </div>
-
-        <!-- Pritts IVCNZ13 -->
-        <div class="pub">
-          <div class="thumb"><img src="./img/papers/Pritts-IVCVNZ13-thumb.jpg" alt="" width="640" height="360" loading="lazy"></div>
-          <div class="meta">
-            <p class="title">Approximate Models for Fast and Accurate Epipolar Geometry Estimation</p>
-            <p class="authors"><span class="me">J. Pritts</span>, O. Chum, J. Matas</p>
-            <p class="venue">Image and Vision Computing New Zealand (IVCNZ) 2013</p>
-            <a class="award" href="#lightbox-ivcnz13">&#9733; Best Paper Award</a>
-            <div class="links">
-              <a href="./doc/ivcvnz13.pdf" target="_blank" rel="noopener">pdf</a>
-              <a href="https://github.com/prittjam/repeats" target="_blank" rel="noopener">code</a>
-              <a href="https://www.slideshare.net/jbpritts/ivcvnz13" target="_blank" rel="noopener">slides</a>
-              <details class="pub-more"><summary>abstract</summary><div class="reveal"><span w3-include-html="doc/pritts-ivcnz13-abstract.html"></span></div></details>
-              <details class="pub-more"><summary>bibtex</summary><div class="reveal"><pre w3-include-html="doc/pritts-ivcnz13-bibtex.html"></pre></div></details>
-            </div>
-          </div>
-        </div>
+        {%- for pub in site.data.publications %}
+        {% include publication.html pub=pub %}
+        {%- endfor %}
       </section>
 
       <!-- ================= AWARDS ================= -->
       <section id="awards">
         <h2>Awards</h2>
         <div class="award-grid">
+          {%- for a in site.data.awards %}
           <div class="award-card">
-            <a href="#lightbox-accv18"><img src="./img/awards/Award-ACCV18-thumb.jpg" alt="ACCV 2018 Saburo Tsuji Best Paper Award" width="260" height="360" loading="lazy"></a>
+            <a href="#{{ a.lightbox }}"><img src="{{ a.image }}" alt="{{ a.alt }}" width="{{ a.width }}" height="{{ a.height }}" loading="lazy"></a>
             <div>
-              <p class="title">ACCV 2018 Saburo Tsuji Best Paper</p>
-              <p class="sub">Rectification from Radially-Distorted Scales</p>
+              <p class="title">{{ a.title }}</p>
+              <p class="sub">{{ a.sub }}</p>
             </div>
           </div>
-          <div class="award-card">
-            <a href="#lightbox-ivcnz13"><img src="./img/awards/Award-IVCVNZ13-thumb.jpg" alt="IVCNZ 2013 Best Paper Award" width="1085" height="866" loading="lazy"></a>
-            <div>
-              <p class="title">IVCNZ 2013 Best Paper</p>
-              <p class="sub">Approximate Models for Fast and Accurate Epipolar Geometry Estimation</p>
-            </div>
-          </div>
+          {%- endfor %}
         </div>
       </section>
 
       <!-- ================= ADVISING ================= -->
       <section id="advising">
         <h2>Advising</h2>
-
-        <h3 class="subhead">M.Sc. Students</h3>
+        {%- for g in site.data.advising %}
+        <h3 class="subhead">{{ g.heading }}</h3>
+        {%- for s in g.students %}
         <div class="advisee">
-          <p class="head">Till Sittart <span class="year">Kiel University, 2026</span></p>
-          <p><span class="degree">Thesis:</span> Affine-Equivariant Blob Targets for Robust Absolute Pose in Robotics</p>
+          <p class="head">{% if s.url %}<a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.name }}</a>{% else %}{{ s.name }}{% endif %} <span class="year">{{ s.where }}</span></p>
+          <p><span class="degree">Thesis:</span> {{ s.thesis }}{% if s.after %}<br>
+            <span class="after">{{ s.after }}</span>{% endif %}</p>
         </div>
-        <div class="advisee">
-          <p class="head">Liam Boddin <span class="year">Kiel University, 2025</span></p>
-          <p><span class="degree">Thesis:</span> Underwater Calibration of Near-point Anisotropic Lights</p>
-        </div>
-        <div class="advisee">
-          <p class="head">Igor Babin <span class="year">Ukrainian Catholic University, 2024</span></p>
-          <p><span class="degree">Thesis:</span> Image Inpainting in Latent Space</p>
-        </div>
-        <div class="advisee">
-          <p class="head">Dmytro Nadobko <span class="year">Ukrainian Catholic University, 2023</span></p>
-          <p><span class="degree">Thesis:</span> Supervised Learning of Correspondence Volumes for Coplanar Repetitive Patterns</p>
-        </div>
-        <div class="advisee">
-          <p class="head">Andrii Stadnik <span class="year">Ukrainian Catholic University, 2023</span></p>
-          <p><span class="degree">Thesis:</span> Corner Localization and Camera Calibration from Imaged Lattices</p>
-        </div>
-        <div class="advisee">
-          <p class="head"><a href="https://ylochman.github.io" target="_blank" rel="noopener">Yaroslava Lochman</a> <span class="year">Ukrainian Catholic University, 2020</span></p>
-          <p><span class="degree">Thesis:</span> Minimal Solvers for Single-View Auto-Calibration<br>
-            <span class="after">moved on as Ph.D. student at Chalmers University of Technology</span></p>
-        </div>
-
-        <h3 class="subhead">B.Sc. Students</h3>
-        <div class="advisee">
-          <p class="head">Yaroslav Romanus <span class="year">Ukrainian Catholic University, 2024</span></p>
-          <p><span class="degree">Thesis:</span> Applying Motion in Latent Space</p>
-        </div>
-        <div class="advisee">
-          <p class="head">Ostap Viniavskyi <span class="year">Ukrainian Catholic University, 2021</span></p>
-          <p><span class="degree">Thesis:</span> Learning Discriminative Context-Aware Keypoints Representations for Resolving Ambiguous Matches<br>
-            <span class="after">moved on as Researcher at The ML Lab at Ukrainian Catholic University</span></p>
-        </div>
-        <div class="advisee">
-          <p class="head">Kostiantyn Liepieshov <span class="year">Ukrainian Catholic University, 2021</span></p>
-          <p><span class="degree">Thesis:</span> Manhattan-Frame Detection in Lens-Distorted Images<br>
-            <span class="after">moved on as M.Sc. student at Ukrainian Catholic University</span></p>
-        </div>
+        {%- endfor %}
+        {%- endfor %}
       </section>
 
       <!-- ================= TEACHING ================= -->
       <section id="teaching">
         <h2>Teaching</h2>
+        {%- for c in site.data.teaching %}
         <div class="course">
-          <span class="years">2025 &ndash; 2026</span>
-          <span>3D Computer Vision, Substitute Instructor &mdash; Kiel University</span>
+          <span class="years">{{ c.years }}</span>
+          <span>{{ c.course }}</span>
         </div>
-        <div class="course">
-          <span class="years">2017 &ndash; 2018</span>
-          <span><a href="http://cs.ucu.edu.ua/en/winterschool/winter-school-2017/" target="_blank" rel="noopener">Image Retrieval</a>, Instructor &mdash; Master&rsquo;s level, Ukrainian Catholic University</span>
-        </div>
-        <div class="course">
-          <span class="years">2013 &ndash; 2016</span>
-          <span><a href="https://www.fel.cvut.cz/en/education/bk/predmety/12/82/p12820204.html" target="_blank" rel="noopener">Pattern Recognition and Machine Learning</a>, TA &mdash; Bachelor&rsquo;s level, Czech Technical University in Prague</span>
-        </div>
+        {%- endfor %}
       </section>
-
-      <footer>
-        &copy; <span id="year">2025</span> James Pritts
-      </footer>
-    </div>
-
-    <!-- ================= AWARD LIGHTBOXES (pure CSS :target) ================= -->
-    <a href="#" class="lightbox" id="lightbox-accv18">
-      <span class="close">&times;</span>
-      <img src="./img/awards/Award-ACCV18-thumb.jpg" alt="ACCV 2018 Saburo Tsuji Best Paper Award" width="260" height="360" loading="lazy">
-    </a>
-    <a href="#" class="lightbox" id="lightbox-ivcnz13">
-      <span class="close">&times;</span>
-      <img src="./img/awards/Award-IVCVNZ13-thumb.jpg" alt="IVCNZ 2013 Best Paper Award" width="1085" height="866" loading="lazy">
-    </a>
-
-    <!-- Dependency-free HTML include for abstract / bibtex fragments -->
-    <script>
-      function includeHTML() {
-        var nodes = document.querySelectorAll("[w3-include-html]");
-        nodes.forEach(function (el) {
-          var file = el.getAttribute("w3-include-html");
-          fetch(file)
-            .then(function (r) { return r.ok ? r.text() : "Not found."; })
-            .then(function (html) {
-              el.innerHTML = html;
-              el.removeAttribute("w3-include-html");
-            })
-            .catch(function () { el.innerHTML = "Not found."; });
-        });
-      }
-      includeHTML();
-    </script>
-  </body>
-</html>

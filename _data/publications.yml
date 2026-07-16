@@ -1,0 +1,313 @@
+# Generated from doc/*.html fragments. Edit here; the site rebuilds on push.
+
+- id: ransac
+  title: 'RANSAC Scoring Done Right'
+  authors: 'J. Pritts, F. Seegräber, K. Köser'
+  venue: 'arXiv preprint arXiv:2606.27385, 2026'
+  thumb: './img/papers/Pritts-arXiv26-thumb.jpg'
+  alt: 'RANSAC Scoring Done Right — profile curves'
+  width: 640
+  height: 360
+  links:
+    - { label: 'pdf', href: 'https://arxiv.org/pdf/2606.27385' }
+    - { label: 'arXiv', href: 'https://arxiv.org/abs/2606.27385' }
+  abstract: 'The most widely used RANSAC variants score candidate models by counting inliers or summing per-point scores that saturate beyond a residual threshold. Every such score requires a user-supplied parameter that is a function of the inlier scale, which must itself be estimated from contaminated data. We remove this dependence by reversing the usual order of inference: rather than estimating the scale and then scoring against it, we marginalize the inlier scale analytically in closed form under a conjugate Inverse-Gamma prior for a fixed inlier partition, then optimize over partitions. A single closed-form expression spans the non-informative Jeffreys limit and informative empirical-Bayes priors, so the same score adapts across data-rich and data-scarce regimes without any change to the algorithm. The proposed RANSAC score is the first in which the inlier scale is genuinely absent from the formula. The score admits O(N log N) computation via sort-and-sweep. On a benchmark of nearly 70,000 image pairs spanning different two-view estimation problems and both engineered and learned feature pipelines, the proposed score exceeds the state of the art (RANSAC, MSAC, GaU, MAGSAC): it stays nearly flat under threshold miscalibration where baselines degrade, reaches near-optimal accuracy from as few as two validation pairs where baselines need on the order of 100 times more, and tightens its prior regularization as validation data grows scarce.'
+  bibtex: |
+    @article{pritts2026ransac,
+      title   = {RANSAC Scoring Done Right},
+      author  = {Pritts, James and Seegr{\"a}ber, Felix and K{\"o}ser, Kevin},
+      journal = {arXiv preprint arXiv:2606.27385},
+      year    = {2026}
+    }
+
+- id: dexheimer-icra22
+  title: 'Information-Theoretic Online Multi-Camera Extrinsic Calibration'
+  authors: 'E. Dexheimer, P. Peluse, J. Chen, J. Pritts, and M. Kaess'
+  venue: 'IEEE Robotics and Automation Letters, 2022'
+  thumb: './img/papers/Dexheimer-ICRA22-thumb.jpg'
+  alt: ''
+  width: 1311
+  height: 765
+  links:
+    - { label: 'pdf', href: 'doc/dexheimer-icra22.pdf' }
+    - { label: 'code', href: 'https://github.com/edexheim/info_ext_calib' }
+  abstract: 'Calibration of multi-camera systems is essential for lifelong use of vision-based headsets and autonomous robots. In this work, we present an information-based framework for online extrinsic calibration of multi-camera systems. While previous work largely focuses on monocular, stereo, or strictly non-overlapping field-of-view (FoV) setups, we allow arbitrary configurations while also exploiting overlapping pairwise FoV when possible. In order to efficiently solve for the extrinsic calibration parameters, which increase linearly with the number of cameras, we propose a novel entropy-based keyframe measure and bound the backend optimization complexity by selecting informative motion segments that minimize the maximum entropy across all extrinsic parameter partitions. We validate the pipeline on three distinct platforms to demonstrate the generality of the method for resolving the extrinsics and performing downstream tasks.'
+  bibtex: |
+    @ARTICLE{9691878,
+      author={Dexheimer, Eric and Peluse, Patrick and Chen, Jianhui and Pritts, James and Kaess, Michael},
+      journal={IEEE Robotics and Automation Letters}, 
+      title={Information-Theoretic Online Multi-Camera Extrinsic Calibration}, 
+      year={2022},
+      volume={7},
+      number={2},
+      pages={4757-4764},
+      doi={10.1109/LRA.2022.3145061}}
+
+- id: lochman-iccv21
+  title: 'BabelCalib: A Universal Approach to Calibrating Central Cameras'
+  authors: 'Y. Lochman, K. Liepieshov, J. Chen, M. Perdoch, C. Zach, J. Pritts'
+  venue: 'International Conference on Computer Vision (ICCV) 2021'
+  thumb: './img/papers/Lochman-ICCV21-thumb.jpg'
+  alt: ''
+  width: 640
+  height: 360
+  links:
+    - { label: 'pdf', href: 'https://arxiv.org/pdf/2109.09704.pdf' }
+    - { label: 'code', href: 'https://github.com/ylochman/babelcalib' }
+  abstract: 'Existing calibration methods occasionally fail for large field-of-view cameras due to the non-linearity of the underlying problem and the lack of good initial values for all parameters of the used camera model. This might occur because a simpler projection model is assumed in an initial step, or a poor initial guess for the internal parameters is pre-defined. A lot of the difficulties of general camera calibration lie in the use of a forward projection model. We side-step these challenges by first proposing a solver to calibrate the parameters in terms of a back-projection model and then regress the parameters for a target forward model. These steps are incorporated in a robust estimation framework to cope with outlying detections. Extensive experiments demonstrate that our approach is very reliable and returns the most accurate calibration parameters as measured on the downstream task of absolute pose estimation on test sets.'
+  bibtex: |
+    @InProceedings{Lochman-ICCV21,
+        title     = {BabelCalib: A Universal Approach to Calibrating Central Cameras},
+        author    = {Lochman, Yaroslava and Liepieshov, Kostiantyn and Chen, Jianhui and Perdoch, Michal and Zach, Christopher and Pritts, James},
+        booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+        year      = {2021},
+        pages     = {15253-15262}
+    }
+
+- id: lochman-wacv21
+  title: 'Minimal Solvers for Single-View Lens-Distorted Camera Auto-Calibration'
+  authors: 'Y. Lochman, O. Dobosevych, R. Hyrniv, J. Pritts'
+  venue: 'Winter Conference on Applications of Computer Vision (WACV) 2021'
+  thumb: './img/papers/Lochman-WACV21-thumb.jpg'
+  alt: ''
+  width: 640
+  height: 360
+  links:
+    - { label: 'pdf', href: 'https://arxiv.org/pdf/2011.08988.pdf' }
+    - { label: 'code', href: 'https://github.com/ucuapps/single-view-autocalib' }
+  abstract: 'This paper proposes minimal solvers that use combinations of imaged translational symmetries and parallel scene lines to jointly estimate lens undistortion with either affine rectification or focal length and absolute orientation. We use constraints provided by orthogonal scene planes to recover the focal length. We show that solvers using feature combinations can recover more accurate calibrations than solvers using only one feature type on scenes that have a balance of lines and texture. We also show that the proposed solvers are complementary and can be used together in a RANSAC-based estimator to improve auto-calibration accuracy. State-of-the-art performance is demonstrated on a standard dataset of lens-distorted urban images.'
+  bibtex: |
+    @InProceedings{Lochman-WACV21,
+        title     = {Minimal Solvers for Single-View Lens-Distorted Camera Auto-Calibration},
+        author    = {Lochman, Yaroslava and Dobosevych, Oles and Hryniv, Rostyslav and Pritts, James},
+        booktitle = {Proceedings of the IEEE Winter Conference on Applications of Computer Vision},
+        year      = {2021},
+    }
+
+- id: pritts-pami21
+  title: 'Minimal Solvers for Rectifying from Radially-Distorted Conjugate Translations'
+  authors: 'J. Pritts, Z. Kukelova, V. Larsson, Y. Lochman, O. Chum'
+  venue: 'IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI) 2021'
+  thumb: './img/papers/Pritts-PAMI21-thumb.jpg'
+  alt: ''
+  width: 640
+  height: 360
+  links:
+    - { label: 'pdf', href: 'https://arxiv.org/pdf/1911.01507.pdf' }
+    - { label: 'code', href: 'https://github.com/prittjam/repeats' }
+  abstract: 'This paper introduces minimal solvers that jointly solve for radial lens undistortion and affine-rectification using local features extracted from the image of coplanar translated and reflected scene texture, which is common in man-made environments. The proposed solvers accommodate different types of local features and sampling strategies, and three of the proposed variants require just one feature correspondence. State-of-the-art techniques from algebraic geometry are used to simplify the formulation of the solvers. The generated solvers are stable, small and fast. Synthetic and real-image experiments show that the proposed solvers have superior robustness to noise compared to the state of the art. The solvers are integrated with an automated system for rectifying imaged scene planes from coplanar repeated texture. Accurate rectifications on challenging imagery taken with narrow to wide field-of-view lenses demonstrate the applicability of the proposed solvers.'
+  bibtex: |
+    @ARTICLE{9086062,
+      author={Pritts, James and Kukelova, Zuzana and Larsson, Viktor and Lochman, Yaroslava and Chum, Ondřej},
+      journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, 
+      title={Minimal Solvers for Rectifying From Radially-Distorted Conjugate Translations}, 
+      year={2021},
+      volume={43},
+      number={11},
+      pages={3931-3948},
+      doi={10.1109/TPAMI.2020.2992261}}
+
+- id: pritts-ijcv20
+  title: 'Minimal Solvers for Rectifying from Radially-Distorted Scales and Change of Scales'
+  authors: 'J. Pritts, Z. Kukelova, V. Larsson, Y. Lochman, O. Chum'
+  venue: 'International Journal of Computer Vision (IJCV) 2020'
+  thumb: './img/papers/Pritts-IJCV20-thumb.jpg'
+  alt: ''
+  width: 640
+  height: 360
+  links:
+    - { label: 'pdf', href: 'https://arxiv.org/pdf/1907.11539.pdf' }
+    - { label: 'code', href: 'https://github.com/prittjam/repeats' }
+  abstract: 'This paper introduces the first minimal solvers that jointly estimate lens distortion and affine rectification from the image of rigidly-transformed coplanar features. The solvers work on scenes without straight lines and, in general, relax strong assumptions about scene content made by the state of the art. The proposed solvers use the affine invariant that coplanar repeats have the same scale in rectified space. The solvers are separated into two groups that differ by how the equal scale invariant of rectified space is used to place constraints on the lens undistortion and rectification parameters. We demonstrate a principled approach for generating stable minimal solvers by the Gröbner basis method, which is accomplished by sampling feasible monomial bases to maximize numerical stability. Synthetic and real-image experiments confirm that the proposed solvers demonstrate superior robustness to noise compared to the state of the art. Accurate rectifications on imagery taken with narrow to fisheye field-of-view lenses demonstrate the wide applicability of the proposed method. The method is fully automatic.'
+  bibtex: |
+    @article{DBLP:journals/ijcv/PrittsKLLC20,
+      author    = {James Pritts and
+                   Zuzana Kukelova and
+                   Viktor Larsson and
+                   Yaroslava Lochman and
+                   Ondrej Chum},
+      title     = {Minimal Solvers for Rectifying from Radially-Distorted Scales and
+                   Change of Scales},
+      journal   = {Int. J. Comput. Vis.},
+      volume    = {128},
+      number    = {4},
+      pages     = {950--968},
+      year      = {2020},
+      url       = {https://doi.org/10.1007/s11263-019-01216-x},
+      doi       = {10.1007/s11263-019-01216-x},
+      timestamp = {Mon, 15 Jun 2020 16:58:58 +0200},
+      biburl    = {https://dblp.org/rec/journals/ijcv/PrittsKLLC20.bib},
+      bibsource = {dblp computer science bibliography, https://dblp.org}
+    }
+
+- id: pritts-accv18
+  title: 'Rectification from Radially-Distorted Scales'
+  authors: 'J. Pritts, Z. Kukelova, V. Larsson, O. Chum'
+  venue: 'Asian Conference on Computer Vision (ACCV) 2018'
+  thumb: './img/papers/Pritts-ACCV18-thumb.jpg'
+  alt: ''
+  width: 640
+  height: 360
+  award:
+    text: 'Best Paper Award'
+    lightbox: 'lightbox-accv18'
+  links:
+    - { label: 'pdf', href: 'https://arxiv.org/pdf/1807.06110.pdf' }
+    - { label: 'code', href: 'https://github.com/prittjam/repeats' }
+  abstract: 'This paper introduces the first minimal solvers that jointly estimate lens distortion and affine rectification from repetitions of rigidly-transformed coplanar local features. The proposed solvers incorporate lens distortion into the camera model and extend accurate rectification to wide-angle images that contain nearly any type of coplanar repeated content. We demonstrate a principled approach to generating stable minimal solvers by the Gröbner basis method, which is accomplished by sampling feasible monomial bases to maximize numerical stability. Synthetic and real-image experiments confirm that the solvers give accurate rectifications from noisy measurements if used in a RANSAC-based estimator. The proposed solvers demonstrate superior robustness to noise compared to the state of the art. The solvers work on scenes without straight lines and, in general, relax strong assumptions about scene content made by the state of the art. Accurate rectifications on imagery taken with narrow focal length to fisheye lenses demonstrate the wide applicability of the proposed method.'
+  bibtex: |
+    @inproceedings{DBLP:conf/accv/PrittsKLC18,
+      author    = {James Pritts and
+                   Zuzana Kukelova and
+                   Viktor Larsson and
+                   Ondrej Chum},
+      editor    = {C. V. Jawahar and
+                   Hongdong Li and
+                   Greg Mori and
+                   Konrad Schindler},
+      title     = {Rectification from Radially-Distorted Scales},
+      booktitle = {Computer Vision - {ACCV} 2018 - 14th Asian Conference on Computer
+                   Vision, Perth, Australia, December 2-6, 2018, Revised Selected Papers,
+                   Part {V}},
+      series    = {Lecture Notes in Computer Science},
+      volume    = {11365},
+      pages     = {36--52},
+      publisher = {Springer},
+      year      = {2018},
+      url       = {https://doi.org/10.1007/978-3-030-20873-8\_3},
+      doi       = {10.1007/978-3-030-20873-8\_3},
+      timestamp = {Mon, 15 Jun 2020 17:02:51 +0200},
+      biburl    = {https://dblp.org/rec/conf/accv/PrittsKLC18.bib},
+      bibsource = {dblp computer science bibliography, https://dblp.org}
+    }
+
+- id: pritts-cvpr18
+  title: 'Radially-Distorted Conjugate Translations'
+  authors: 'J. Pritts, Z. Kukelova, V. Larsson, O. Chum'
+  venue: 'Conference on Computer Vision and Pattern Recognition (CVPR) 2018'
+  thumb: './img/papers/Pritts-CVPR18-thumb.jpg'
+  alt: ''
+  width: 640
+  height: 360
+  links:
+    - { label: 'pdf', href: 'https://arxiv.org/pdf/1711.11339.pdf' }
+    - { label: 'code', href: 'https://github.com/prittjam/repeats' }
+    - { label: 'slides', href: 'https://www.slideshare.net/jbpritts/radiallydistorted-conjugate-translations' }
+    - { label: 'poster', href: 'https://drive.google.com/file/d/179HiQU7alp-8Z8QNS2xjjLqNHEStnA8U/view' }
+  abstract: 'This paper introduces the first minimal solvers that jointly solve for affine-rectification and radial lens distortion from coplanar repeated patterns. Even with imagery from moderately distorted lenses, plane rectification using the pinhole camera model is inaccurate or invalid. The proposed solvers incorporate lens distortion into the camera model and extend accurate rectification to wide-angle imagery, which is now common from consumer cameras. The solvers are derived from constraints induced by the conjugate translations of an imaged scene plane, which are integrated with the division model for radial lens distortion. The hidden-variable trick with ideal saturation is used to reformulate the constraints so that the solvers generated by the Grobner-basis method are stable, small and fast. Rectification and lens distortion are recovered from either one conjugately translated affine-covariant feature or two independently translated similarity-covariant features. The proposed solvers are used in a \RANSAC-based estimator, which gives accurate rectifications after few iterations. The proposed solvers are evaluated against the state-of-the-art and demonstrate significantly better rectifications on noisy measurements. Qualitative results on diverse imagery demonstrate high-accuracy undistortions and rectifications.'
+  bibtex: |
+    @inproceedings{DBLP:conf/cvpr/PrittsKLC18,
+      author    = {James Pritts and
+                   Zuzana Kukelova and
+                   Viktor Larsson and
+                   Ondrej Chum},
+      title     = {Radially-Distorted Conjugate Translations},
+      booktitle = {2018 {IEEE} Conference on Computer Vision and Pattern Recognition,
+                   {CVPR} 2018, Salt Lake City, UT, USA, June 18-22, 2018},
+      pages     = {1993--2001},
+      publisher = {{IEEE} Computer Society},
+      year      = {2018},
+      url       = {http://openaccess.thecvf.com/content\_cvpr\_2018/html/Pritts\_Radially-Distorted\_Conjugate\_Translations\_CVPR\_2018\_paper.html},
+      doi       = {10.1109/CVPR.2018.00213},
+      timestamp = {Mon, 15 Jun 2020 17:08:28 +0200},
+      biburl    = {https://dblp.org/rec/conf/cvpr/PrittsKLC18.bib},
+      bibsource = {dblp computer science bibliography, https://dblp.org}
+    }
+
+- id: pritts-bmvc16
+  title: 'Coplanar Repeats by Energy Minimization'
+  authors: 'J. Pritts, D. Rozumnyi, M. P. Kumar, O. Chum'
+  venue: 'British Machine Vision Conference (BMVC) 2016'
+  thumb: './img/papers/Pritts-BMVC16-thumb.jpg'
+  alt: ''
+  width: 640
+  height: 360
+  links:
+    - { label: 'pdf', href: 'http://arxiv.org/pdf/1711.09432' }
+    - { label: 'poster', href: 'https://goo.gl/txjyMi' }
+  abstract: 'This paper proposes an automated method to detect, group and rectify arbitrarily-arranged coplanar repeats via energy minimization. The proposed energy functional combines several features reflecting how planes with repeated elements are built and projected into images. The scene is modeled globally, so discriminating interactions between different coplanar repeat groups and scene planes can be captured. An inference framework based on a recent variant of alpha expansion is described and fast convergence is demonstrated. The proposed method is evaluated using a new dataset of annotated images containing coplanar repeats in diverse arrangements. The dataset will be made publicly available. A significant improvement in rectifications estimated from detected coplanar repeats is reported with respect to two widely used geometric multi-model fitting methods.'
+  bibtex: |
+    @inproceedings{DBLP:conf/bmvc/PrittsRKC16,
+      author    = {James Pritts and
+                   Denys Rozumnyi and
+                   M. Pawan Kumar and
+                   Ondrej Chum},
+      editor    = {Richard C. Wilson and
+                   Edwin R. Hancock and
+                   William A. P. Smith},
+      title     = {Coplanar Repeats by Energy Minimization},
+      booktitle = {Proceedings of the British Machine Vision Conference 2016, {BMVC}
+                   2016, York, UK, September 19-22, 2016},
+      publisher = {{BMVA} Press},
+      year      = {2016},
+      url       = {http://www.bmva.org/bmvc/2016/papers/paper107/index.html},
+      timestamp = {Thu, 07 Jun 2018 10:06:28 +0200},
+      biburl    = {https://dblp.org/rec/conf/bmvc/PrittsRKC16.bib},
+      bibsource = {dblp computer science bibliography, https://dblp.org}
+    }
+
+- id: pritts-cvpr14
+  title: 'Detection, Rectification and Segmentation of Coplanar Repeated Patterns'
+  authors: 'J. Pritts, O. Chum, J. Matas'
+  venue: 'Conference on Computer Vision and Pattern Recognition (CVPR) 2014'
+  thumb: './img/papers/Pritts-CVPR14-thumb.jpg'
+  alt: ''
+  width: 640
+  height: 360
+  links:
+    - { label: 'pdf', href: './doc/cvpr14.pdf' }
+    - { label: 'code', href: 'https://github.com/prittjam/repeats' }
+    - { label: 'poster', href: 'https://drive.google.com/file/d/1y3VEjWE7xyXsjLhVkx9REvnvowM91K5v/view' }
+  abstract: 'This paper presents a novel and general method for the detection, rectification and segmentation of imaged coplanar repeated patterns. The only assumption made of the scene geometry is that repeated scene elements are mapped to each other by planar Euclidean transformations. The class of patterns covered is broad and includes nearly all commonly seen, planar, man-made repeated patterns. In addition, novel linear constraints are used to reduce geometric ambiguity between the rectified imaged pattern and the scene pattern. Rectification to within a similarity of the scene plane is achieved from one rotated repeat, or to within a similarity with a scale ambiguity along the axis of symmetry from one reflected repeat. A stratum of constraints is derived that gives the necessary configuration of repeats for each successive level of rectification. A generative model for the imaged pattern is inferred and used to segment the pattern with pixel accuracy. Qualitative results are shown on a broad range of image types on which state-of-the-art methods fail.'
+  bibtex: |
+    @inproceedings{DBLP:conf/cvpr/PrittsCM14,
+      author    = {James Pritts and
+                   Ondrej Chum and
+                   Jiri Matas},
+      title     = {Rectification, and Segmentation of Coplanar Repeated Patterns},
+      booktitle = {2014 {IEEE} Conference on Computer Vision and Pattern Recognition,
+                   {CVPR} 2014, Columbus, OH, USA, June 23-28, 2014},
+      pages     = {2973--2980},
+      publisher = {{IEEE} Computer Society},
+      year      = {2014},
+      url       = {https://doi.org/10.1109/CVPR.2014.380},
+      doi       = {10.1109/CVPR.2014.380},
+      timestamp = {Wed, 16 Oct 2019 14:14:50 +0200},
+      biburl    = {https://dblp.org/rec/conf/cvpr/PrittsCM14.bib},
+      bibsource = {dblp computer science bibliography, https://dblp.org}
+    }
+
+- id: pritts-ivcnz13
+  title: 'Approximate Models for Fast and Accurate Epipolar Geometry Estimation'
+  authors: 'J. Pritts, O. Chum, J. Matas'
+  venue: 'Image and Vision Computing New Zealand (IVCNZ) 2013'
+  thumb: './img/papers/Pritts-IVCVNZ13-thumb.jpg'
+  alt: ''
+  width: 640
+  height: 360
+  award:
+    text: 'Best Paper Award'
+    lightbox: 'lightbox-ivcnz13'
+  links:
+    - { label: 'pdf', href: './doc/ivcvnz13.pdf' }
+    - { label: 'code', href: 'https://github.com/prittjam/repeats' }
+    - { label: 'slides', href: 'https://www.slideshare.net/jbpritts/ivcvnz13' }
+  abstract: 'This paper investigates the plausibility of using approximate models for hypothesis generation in a RANSAC framework to accurately and reliably estimate the fundamental matrix. Two novel fundamental matrix estimators are introduced that sample two correspondences to generate affine-fundamental matrices for RANSAC hypotheses. A new RANSAC framework is presented that uses local optimization to estimate the fundamental matrix from the consensus correspondence sets of verified hypotheses, which are approximate models. The proposed estimators are shown to perform better than other approximate models that have previously been used in the literature for fundamental matrix estimation in a rigorous evaluation. In addition the proposed estimators are over 30 times faster, in terms of models verified, than the 7-point method, and offer comparable accuracy and repeatability on a large subset of the test set.'
+  bibtex: |
+    @inproceedings{DBLP:conf/ivcnz/PrittsCM13,
+      author    = {James Pritts and
+                   Ondrej Chum and
+                   Jiri Matas},
+      title     = {Approximate models for fast and accurate epipolar geometry estimation},
+      booktitle = {28th International Conference on Image and Vision Computing New Zealand,
+                   {IVCNZ} 2013, Wellington, New Zealand, November 27-29, 2013},
+      pages     = {106--111},
+      publisher = {{IEEE}},
+      year      = {2013},
+      url       = {https://doi.org/10.1109/IVCNZ.2013.6727000},
+      doi       = {10.1109/IVCNZ.2013.6727000},
+      timestamp = {Wed, 16 Oct 2019 14:14:52 +0200},
+      biburl    = {https://dblp.org/rec/conf/ivcnz/PrittsCM13.bib},
+      bibsource = {dblp computer science bibliography, https://dblp.org}
+    }
+

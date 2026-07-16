@@ -1,0 +1,24 @@
+{%- assign pub = include.pub -%}
+{%- capture me -%}<span class="me">{{ site.data.profile.me }}</span>{%- endcapture -%}
+<div class="pub">
+  <div class="thumb"><img src="{{ pub.thumb }}" alt="{{ pub.alt }}" width="{{ pub.width }}" height="{{ pub.height }}" loading="lazy"></div>
+  <div class="meta">
+    <p class="title">{{ pub.title }}</p>
+    <p class="authors">{{ pub.authors | replace: site.data.profile.me, me }}</p>
+    <p class="venue">{{ pub.venue }}</p>
+    {%- if pub.award %}
+    <a class="award" href="#{{ pub.award.lightbox }}">&#9733; {{ pub.award.text }}</a>
+    {%- endif %}
+    <div class="links">
+      {%- for l in pub.links %}
+      <a href="{{ l.href }}" target="_blank" rel="noopener">{{ l.label }}</a>
+      {%- endfor %}
+      {%- if pub.abstract %}
+      <details class="pub-more"><summary>abstract</summary><div class="reveal">{{ pub.abstract }}</div></details>
+      {%- endif %}
+      {%- if pub.bibtex %}
+      <details class="pub-more"><summary>bibtex</summary><div class="reveal"><pre>{{ pub.bibtex | escape }}</pre></div></details>
+      {%- endif %}
+    </div>
+  </div>
+</div>
