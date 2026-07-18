@@ -71,7 +71,7 @@ layout: default
         <h3 class="subhead">{{ g.heading }}</h3>
         {%- for s in g.students %}
         <div class="advisee">
-          <p class="head">{% if s.url %}<a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.name }}</a>{% else %}{{ s.name }}{% endif %} <span class="year">{{ s.where }}</span>{% if s.wip %} <span class="wip">work in progress</span>{% endif %}</p>
+          <p class="head">{% if s.url %}<a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.name }}</a>{% else %}{{ s.name }}{% endif %}<span class="sep" aria-hidden="true">·</span><span class="year">{{ s.where }}</span>{% if s.wip %}<span class="wip">work in progress</span>{% endif %}</p>
           <p><span class="degree">Thesis:</span> {{ s.thesis }}{% if s.after %}<br>
             <span class="after">{{ s.after }}</span>{% endif %}</p>
         </div>
