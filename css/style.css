@@ -291,16 +291,18 @@ details.pub-more[open] > summary { font-weight: 600; }
 .advisee .name { flex: 0 0 200px; font-weight: 600; }
 .advisee .inst { flex: 1 1 auto; color: var(--muted); font-weight: 400; }
 .advisee .year {
-  flex: 0 0 120px;
+  flex: 0 0 140px;
   color: var(--muted);
   font-weight: 400;
   font-variant-numeric: tabular-nums;
   text-align: right;
+  white-space: nowrap;
 }
 .advisee .degree { font-weight: 600; }
 .advisee .after { color: var(--muted); font-size: 0.92rem; }
 .advisee .wip {
   display: inline-block;
+  white-space: nowrap;
   padding: 1px 7px;
   font-size: 0.72rem;
   font-weight: 600;
