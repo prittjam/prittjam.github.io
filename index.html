@@ -70,9 +70,9 @@ layout: default
         {%- for g in site.data.advising %}
         <h3 class="subhead">{{ g.heading }}</h3>
         {%- for s in g.students %}
-        <div class="advisee">
+        <div class="entry advisee">
           <p class="head"><span class="name">{% if s.url %}<a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.name }}</a>{% else %}{{ s.name }}{% endif %}</span><span class="inst">{{ s.institution }}</span><span class="year">{% if s.wip %}<span class="wip">work in progress</span>{% else %}{{ s.year }}{% endif %}</span></p>
-          <p class="thesis"><cite>{{ s.thesis }}</cite></p>
+          <p class="title"><cite>{{ s.thesis }}</cite></p>
         </div>
         {%- endfor %}
         {%- endfor %}
@@ -82,9 +82,9 @@ layout: default
       <section id="teaching">
         <h2>Teaching</h2>
         {%- for c in site.data.teaching %}
-        <div class="course">
-          <span class="years">{{ c.years }}</span>
-          <span>{{ c.course }}</span>
+        <div class="entry course">
+          <p class="head"><span class="name">{{ c.role }}</span><span class="inst">{% if c.level %}{{ c.level }}, {% endif %}{{ c.institution }}</span><span class="year">{{ c.years }}</span></p>
+          <p class="title"><cite>{% if c.url %}<a href="{{ c.url }}" target="_blank" rel="noopener">{{ c.course }}</a>{% else %}{{ c.course }}{% endif %}</cite></p>
         </div>
         {%- endfor %}
       </section>

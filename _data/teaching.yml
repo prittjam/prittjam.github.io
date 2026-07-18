@@ -1,8 +1,18 @@
-# `course` may contain inline HTML (links). Dashes: – (en) between years,
-# — (em) before the institution.
-- years: 2025 – 2026
-  course: '3D Computer Vision, Substitute Instructor — Kiel University'
-- years: 2017 – 2018
-  course: '<a href="http://cs.ucu.edu.ua/en/winterschool/winter-school-2017/" target="_blank" rel="noopener">Image Retrieval</a>, Instructor — Master’s level, Ukrainian Catholic University'
-- years: 2013 – 2016
-  course: '<a href="https://www.fel.cvut.cz/en/education/bk/predmety/12/82/p12820204.html" target="_blank" rel="noopener">Pattern Recognition and Machine Learning</a>, TA — Bachelor’s level, Czech Technical University in Prague'
+# Each course: role, institution, optional level, years, course (the title),
+# optional url (links the course title). Dashes: – (en) between years.
+- role: Substitute Instructor
+  institution: Kiel University
+  years: 2025 – 2026
+  course: 3D Computer Vision
+- role: Instructor
+  level: Master’s level
+  institution: Ukrainian Catholic University
+  years: 2017 – 2018
+  course: Image Retrieval
+  url: http://cs.ucu.edu.ua/en/winterschool/winter-school-2017/
+- role: TA
+  level: Bachelor’s level
+  institution: Czech Technical University in Prague
+  years: 2013 – 2016
+  course: Pattern Recognition and Machine Learning
+  url: https://www.fel.cvut.cz/en/education/bk/predmety/12/82/p12820204.html

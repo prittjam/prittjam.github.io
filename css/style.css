@@ -285,12 +285,13 @@ details.pub-more[open] > summary { font-weight: 600; }
   margin: 26px 0 4px;
 }
 .subhead:first-of-type { margin-top: 4px; }
-.advisee { padding: 12px 0; border-bottom: 1px solid var(--border); }
-.advisee:last-child { border-bottom: none; }
-.advisee .head { display: flex; align-items: baseline; gap: 18px; }
-.advisee .name { flex: 0 0 200px; font-weight: 600; }
-.advisee .inst { flex: 1 1 auto; color: var(--muted); font-weight: 400; }
-.advisee .year {
+/* ---- shared two-row entry layout (advising + teaching) ---- */
+.entry { padding: 12px 0; border-bottom: 1px solid var(--border); }
+.entry:last-child { border-bottom: none; }
+.entry .head { display: flex; align-items: baseline; gap: 18px; }
+.entry .name { flex: 0 0 200px; font-weight: 600; }
+.entry .inst { flex: 1 1 auto; color: var(--muted); font-weight: 400; }
+.entry .year {
   flex: 0 0 140px;
   color: var(--muted);
   font-weight: 400;
@@ -298,9 +299,9 @@ details.pub-more[open] > summary { font-weight: 600; }
   text-align: right;
   white-space: nowrap;
 }
-.advisee .thesis { margin-top: 2px; text-align: right; }
-.advisee .thesis cite { font-style: italic; color: var(--text); }
-.advisee .wip {
+.entry .title { margin-top: 2px; text-align: right; }
+.entry .title cite { font-style: italic; color: var(--text); }
+.entry .wip {
   display: inline-block;
   white-space: nowrap;
   padding: 1px 7px;
@@ -312,21 +313,6 @@ details.pub-more[open] > summary { font-weight: 600; }
   background: var(--accent-soft);
   border-radius: 999px;
   vertical-align: middle;
-}
-
-/* ---- teaching ---- */
-.course {
-  display: flex;
-  gap: 18px;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--border);
-}
-.course:last-child { border-bottom: none; }
-.course .years {
-  flex: 0 0 120px;
-  color: var(--muted);
-  font-variant-numeric: tabular-nums;
-  font-size: 0.92rem;
 }
 
 /* ---- footer ---- */
@@ -370,8 +356,7 @@ footer {
   .pub .thumb, .pub .thumb img { width: 100%; max-width: 260px; }
   ul.news li { flex-direction: column; gap: 2px; }
   ul.news .date { flex-basis: auto; }
-  .course { flex-direction: column; gap: 2px; }
-  .advisee .head { flex-direction: column; gap: 2px; }
-  .advisee .name, .advisee .year { flex-basis: auto; }
-  .advisee .year { text-align: left; }
+  .entry .head { flex-direction: column; gap: 2px; }
+  .entry .name, .entry .year { flex-basis: auto; }
+  .entry .year { text-align: left; }
 }
