@@ -299,8 +299,17 @@ details.pub-more[open] > summary { font-weight: 600; }
   text-align: right;
   white-space: nowrap;
 }
-.entry .title { margin-top: 2px; text-align: right; }
-.entry .title cite { font-style: italic; color: var(--text); }
+.entry .title { margin-top: 2px; text-align: right; font-style: italic; color: var(--text); }
+.entry .title cite, .entry .title em { font-style: italic; }
+/* teaching: let the course title flex and add a level (M.Sc./B.Sc.) column */
+.course .name { flex: 1 1 auto; }
+.course .level {
+  flex: 0 0 56px;
+  color: var(--muted);
+  font-weight: 400;
+  text-align: right;
+  white-space: nowrap;
+}
 .entry .wip {
   display: inline-block;
   white-space: nowrap;
@@ -357,6 +366,6 @@ footer {
   ul.news li { flex-direction: column; gap: 2px; }
   ul.news .date { flex-basis: auto; }
   .entry .head { flex-direction: column; gap: 2px; }
-  .entry .name, .entry .year { flex-basis: auto; }
-  .entry .year { text-align: left; }
+  .entry .name, .entry .year, .course .level { flex-basis: auto; }
+  .entry .year, .course .level { text-align: left; }
 }

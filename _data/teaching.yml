@@ -1,18 +1,20 @@
-# Each course: role, institution, optional level, years, course (the title),
-# optional url (links the course title). Dashes: – (en) between years.
-- role: Substitute Instructor
+# Each course: course (the title), institution, level (M.Sc. / B.Sc.),
+# role, years, optional url (links the course title).
+# Dashes: – (en) between years.
+- course: 3D Computer Vision
   institution: Kiel University
+  level: M.Sc.
+  role: Substitute Instructor
   years: 2025 – 2026
-  course: 3D Computer Vision
-- role: Instructor
-  level: Master’s level
+- course: Image Retrieval
   institution: Ukrainian Catholic University
+  level: M.Sc.
+  role: Instructor
   years: 2017 – 2018
-  course: Image Retrieval
   url: http://cs.ucu.edu.ua/en/winterschool/winter-school-2017/
-- role: TA
-  level: Bachelor’s level
+- course: Pattern Recognition and Machine Learning
   institution: Czech Technical University in Prague
+  level: B.Sc.
+  role: TA
   years: 2013 – 2016
-  course: Pattern Recognition and Machine Learning
   url: https://www.fel.cvut.cz/en/education/bk/predmety/12/82/p12820204.html
