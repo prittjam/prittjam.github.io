@@ -1,6 +1,5 @@
 # Each course: course (the title), institution, level (M.Sc. / B.Sc.),
-# role, years, optional url (links the course title).
-# Dashes: – (en) between years.
+# role, years. Dashes: – (en) between years.
 - course: 3D Computer Vision
   institution: Kiel University
   level: M.Sc.
@@ -11,10 +10,8 @@
   level: M.Sc.
   role: Instructor
   years: 2017 – 2018
-  url: http://cs.ucu.edu.ua/en/winterschool/winter-school-2017/
 - course: Pattern Recognition and Machine Learning
   institution: Czech Technical University in Prague
   level: B.Sc.
   role: TA
   years: 2013 – 2016
-  url: https://www.fel.cvut.cz/en/education/bk/predmety/12/82/p12820204.html

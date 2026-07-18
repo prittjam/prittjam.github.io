@@ -83,7 +83,7 @@ layout: default
         <h2>Teaching</h2>
         {%- for c in site.data.teaching %}
         <div class="entry course">
-          <p class="head"><span class="name">{% if c.url %}<a href="{{ c.url }}" target="_blank" rel="noopener">{{ c.course }}</a>{% else %}{{ c.course }}{% endif %}</span><span class="inst">{{ c.institution }}</span><span class="level">{{ c.level }}</span><span class="year">{{ c.years }}</span></p>
+          <p class="head"><span class="name">{{ c.course }}</span><span class="inst">{{ c.institution }}</span><span class="level">{{ c.level }}</span><span class="year">{{ c.years }}</span></p>
           <p class="title"><em>{{ c.role }}</em></p>
         </div>
         {%- endfor %}
