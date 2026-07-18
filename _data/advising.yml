@@ -2,6 +2,18 @@
 # where (institution + year), thesis, optional after (what they did next).
 - heading: M.Sc. Students
   students:
+    - name: Hendrik Sauer
+      where: Kiel University
+      thesis: Affine-Equivariant Neural Networks for the Feature Matching Problem
+      wip: true
+    - name: Ties Harder
+      where: Kiel University
+      thesis: Boundary Movement Aware Differentiable Rendering for Visual Calibration Tasks
+      wip: true
+    - name: Philipp Böll
+      where: Kiel University
+      thesis: Underwater Light Rig Auto-Calibration from Asynchronous Cameras
+      wip: true
     - name: Till Sittart
       where: Kiel University, 2026
       thesis: Affine-Equivariant Blob Targets for Robust Absolute Pose in Robotics

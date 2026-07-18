@@ -291,6 +291,19 @@ details.pub-more[open] > summary { font-weight: 600; }
 .advisee .year { color: var(--muted); font-weight: 400; }
 .advisee .degree { font-weight: 600; }
 .advisee .after { color: var(--muted); font-size: 0.92rem; }
+.advisee .wip {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 7px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-radius: 999px;
+  vertical-align: middle;
+}
 
 /* ---- teaching ---- */
 .course {
