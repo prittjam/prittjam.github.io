@@ -1,6 +1,6 @@
 # Grouped by degree. Each student: name, optional url (links the name),
 # institution, optional year (omit for work-in-progress), thesis,
-# optional after (what they did next), optional wip flag.
+# optional wip flag.
 - heading: M.Sc. Students
   students:
     - name: Hendrik Sauer
@@ -40,7 +40,6 @@
       institution: Ukrainian Catholic University
       year: 2020
       thesis: Minimal Solvers for Single-View Auto-Calibration
-      after: moved on as Ph.D. student at Chalmers University of Technology
 - heading: B.Sc. Students
   students:
     - name: Yaroslav Romanus
@@ -51,9 +50,7 @@
       institution: Ukrainian Catholic University
       year: 2021
       thesis: Learning Discriminative Context-Aware Keypoints Representations for Resolving Ambiguous Matches
-      after: moved on as Researcher at The ML Lab at Ukrainian Catholic University
     - name: Kostiantyn Liepieshov
       institution: Ukrainian Catholic University
       year: 2021
       thesis: Manhattan-Frame Detection in Lens-Distorted Images
-      after: moved on as M.Sc. student at Ukrainian Catholic University
