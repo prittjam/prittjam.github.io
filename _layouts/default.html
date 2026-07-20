@@ -5,7 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title | default: site.title }}</title>
     <meta name="description" content="{{ page.description | default: site.description }}">
+
+    <!-- Favicon (shown next to Google search results) -->
+    <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any">
+    <link rel="icon" type="image/png" sizes="48x48" href="{{ '/favicon-48x48.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ '/favicon-96x96.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ '/favicon-192x192.png' | relative_url }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | relative_url }}">
+
     <link rel="stylesheet" href="./css/style.css">
+
+    <!-- schema.org/Person: helps Google associate your name, photo, and affiliations -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": {{ site.data.profile.name | jsonify }},
+      "url": {{ site.url | jsonify }},
+      "image": {{ site.url | append: '/me.png' | jsonify }},
+      "jobTitle": "Marie Skłodowska-Curie Fellow",
+      "worksFor": {
+        "@type": "CollegeOrUniversity",
+        "name": "Kiel University (CAU Kiel)"
+      },
+      "sameAs": [
+      {%- assign profiles = site.data.social | where_exp: "s", "s.key != 'email' and s.key != 'cv'" -%}
+      {%- for s in profiles %}
+        {{ s.href | jsonify }}{% unless forloop.last %},{% endunless %}
+      {%- endfor %}
+      ]
+    }
+    </script>
   </head>
 
   <body>
