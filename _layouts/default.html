@@ -28,12 +28,12 @@
         "@type": "CollegeOrUniversity",
         "name": "Kiel University (CAU Kiel)"
       },
-      "sameAs": [
-      {%- assign profiles = site.data.social | where_exp: "s", "s.key != 'email' and s.key != 'cv'" -%}
-      {%- for s in profiles %}
-        {{ s.href | jsonify }}{% unless forloop.last %},{% endunless %}
-      {%- endfor %}
-      ]
+      {%- capture hrefs -%}
+      {%- for s in site.data.social -%}
+      {%- unless s.key == "email" or s.key == "cv" -%}{{ s.href }}|{%- endunless -%}
+      {%- endfor -%}
+      {%- endcapture -%}
+      "sameAs": {{ hrefs | split: "|" | jsonify }}
     }
     </script>
   </head>
