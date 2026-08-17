@@ -13,8 +13,8 @@ Reality Labs, where he developed geometric calibration methods for head-mounted
 capture systems.
 
 His work has received the ACCV 2018 Saburo Tsuji Best Paper Award and the IVCNZ
-2013 Best Paper Award. He is also a member of the European Laboratory for
-Learning and Intelligent Systems. Earlier in his career, he served as Lead
+2013 Best Paper Award. He is a Kiel Marine Science Associate and a member of
+the European Laboratory for Learning and Intelligent Systems. Earlier in his career, he served as Lead
 Engineer at BAE Systems on DARPA-funded computer-vision projects and as a
 research fellow at NASA, where he developed prototype gesture-recognition
 software for the International Space Station.
