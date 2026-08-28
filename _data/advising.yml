@@ -3,10 +3,6 @@
 # optional wip flag.
 - heading: M.Sc. Students
   students:
-    - name: Hendrik Sauer
-      institution: Kiel University
-      thesis: Affine-Equivariant Neural Networks for the Feature Matching Problem
-      wip: true
     - name: Ties Harder
       institution: Kiel University
       thesis: Boundary Movement Aware Differentiable Rendering for Visual Calibration Tasks
@@ -15,6 +11,10 @@
       institution: Kiel University
       thesis: Underwater Light Rig Auto-Calibration from Asynchronous Cameras
       wip: true
+    - name: Hendrik Sauer
+      institution: Kiel University
+      year: 2026
+      thesis: Affine-Equivariant Neural Networks for the Feature Matching Problem
     - name: Till Sittart
       institution: Kiel University
       year: 2026
