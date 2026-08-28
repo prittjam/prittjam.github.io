@@ -1,5 +1,26 @@
 # Generated from doc/*.html fragments. Edit here; the site rebuilds on push.
 
+- id: blobboards
+  title: 'BlobBoards: Robust Markers for Accurate Pose'
+  authors: 'J. Pritts, T. Sittart, H. Sauer, S. Janßen, F. Seegräber, D. Nakath, K. Köser'
+  venue: 'British Machine Vision Conference (BMVC) 2026'
+  thumb: './img/papers/Pritts-BMVC26-thumb.jpg'
+  alt: 'A cluttered scene with many BlobBoards at different distances and angles, each outlined in a distinct colour with its blob pattern re-projected onto the board.'
+  width: 640
+  height: 360
+  links:
+    - { label: 'pdf', href: 'https://blobboards.github.io/blobboards_bmvc2026.pdf' }
+    - { label: 'project', href: 'https://blobboards.github.io' }
+    - { label: 'code', href: 'https://github.com/prittjam/BlobBoards.jl' }
+  abstract: 'We propose BlobBoards, a fiducial marker system comprising a dense, multi-scale field of Gaussian blobs and a feature-based pipeline for joint detection, identification, and pose estimation. Each board is registered from hundreds of blob features whose dense spatial coverage constrains pose, while multiple scales preserve detectability across large changes in focal length, distance, and obliquity. Learned local descriptors are matched to the reference pattern and spatially verified, so the correspondences determine pose and certify identity. Against motion-capture ground truth, BlobBoards achieve median translation errors of 3.6–5.0 mm, reducing AprilTag''s median translation error by 89% on small boards and 70% on large ones. They also produce far fewer large-rotation failures than state-of-the-art tag systems. BlobBoards achieve the highest detection rate, 80% versus 74% for AprilTag and 58% for ArUco, with the largest margin on the smallest markers. Under 50% occlusion, they still detect 69% of boards with essentially unchanged median translation error, while AprilTag and ArUco detect none. In experiments BlobBoards give state-of-the-art detection rate, pose accuracy and occlusion robustness.'
+  bibtex: |
+    @inproceedings{pritts2026blobboards,
+      author    = {Pritts, James and Sittart, Till and Sauer, Hendrik and Jan{\ss}en, Silja and Seegr{\"a}ber, Felix and Nakath, David and K{\"o}ser, Kevin},
+      title     = {{BlobBoards}: Robust Markers for Accurate Pose},
+      booktitle = {British Machine Vision Conference (BMVC)},
+      year      = {2026}
+    }
+
 - id: ransac
   title: 'RANSAC Scoring Done Right'
   authors: 'J. Pritts, F. Seegräber, K. Köser'
