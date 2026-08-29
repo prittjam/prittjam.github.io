@@ -6,6 +6,31 @@
     <title>{{ page.title | default: site.title }}</title>
     <meta name="description" content="{{ page.description | default: site.description }}">
 
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+    <!-- Open Graph: how a pasted link renders on LinkedIn, Bluesky, Mastodon,
+         Slack, WhatsApp, Signal, Discord and iMessage. Absolute URLs are
+         required here — crawlers do not resolve relative paths. -->
+    <meta property="og:type" content="profile">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:title" content="{{ page.title | default: site.title }}">
+    <meta property="og:description" content="{{ page.description | default: site.description | strip_newlines | escape }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="{{ '/img/og-card.png' | absolute_url }}">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="{{ site.data.profile.name }} — CAU Kiel, Marie Skłodowska-Curie Fellow. Robust geometric estimation for computer vision.">
+    <meta property="profile:first_name" content="James">
+    <meta property="profile:last_name" content="Pritts">
+    <meta property="profile:username" content="prittjam">
+
+    <!-- X only needs the tags that have no Open Graph equivalent; title,
+         description and image fall back to the og:* tags above. -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@prittjam">
+
     <!-- Favicon (shown next to Google search results) -->
     <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any">
     <link rel="icon" type="image/png" sizes="48x48" href="{{ '/favicon-48x48.png' | relative_url }}">

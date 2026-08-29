@@ -13,6 +13,7 @@ exclude:
   - rm_backups.sh
   - gen_pubs.py
   - scratchpad
+  - tools
   - Gemfile
   - Gemfile.lock
   - vendor
