@@ -17,7 +17,11 @@
       <details class="pub-more"><summary>abstract</summary><div class="reveal">{{ pub.abstract }}</div></details>
       {%- endif %}
       {%- if pub.bibtex %}
-      <details class="pub-more"><summary>bibtex</summary><div class="reveal"><pre>{{ pub.bibtex | escape }}</pre></div></details>
+      <details class="pub-more"><summary>bibtex</summary><div class="reveal bibtex">
+        <button class="copy-btn" type="button" aria-label="Copy BibTeX" title="Copy BibTeX">
+          <svg class="icon-copy" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          <svg class="icon-done" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+        </button><pre>{{ pub.bibtex | escape }}</pre></div></details>
       {%- endif %}
     </div>
   </div>
