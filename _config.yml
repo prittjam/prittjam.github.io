@@ -10,6 +10,7 @@ lang: en
 # _layouts/ and _includes/. GitHub Pages rebuilds the static site on push.
 exclude:
   - README.md
+  - LICENSE
   - rm_backups.sh
   - gen_pubs.py
   - scratchpad
