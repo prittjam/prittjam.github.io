@@ -24,7 +24,7 @@
 - id: ransac
   title: 'RANSAC Scoring Done Right'
   authors: 'J. Pritts, F. Seegräber, K. Köser'
-  venue: 'arXiv preprint arXiv:2606.27385, 2026'
+  venue: 'Neural Information Processing Systems (NeurIPS) 2026'
   thumb: './img/papers/Pritts-arXiv26-thumb.jpg'
   alt: 'RANSAC Scoring Done Right — profile curves'
   width: 640
@@ -34,11 +34,13 @@
     - { label: 'arXiv', href: 'https://arxiv.org/abs/2606.27385' }
   abstract: 'The most widely used RANSAC variants score candidate models by counting inliers or summing per-point scores that saturate beyond a residual threshold. Every such score requires a user-supplied parameter that is a function of the inlier scale, which must itself be estimated from contaminated data. We remove this dependence by reversing the usual order of inference: rather than estimating the scale and then scoring against it, we marginalize the inlier scale analytically in closed form under a conjugate Inverse-Gamma prior for a fixed inlier partition, then optimize over partitions. A single closed-form expression spans the non-informative Jeffreys limit and informative empirical-Bayes priors, so the same score adapts across data-rich and data-scarce regimes without any change to the algorithm. The proposed RANSAC score is the first in which the inlier scale is genuinely absent from the formula. The score admits O(N log N) computation via sort-and-sweep. On a benchmark of nearly 70,000 image pairs spanning different two-view estimation problems and both engineered and learned feature pipelines, the proposed score exceeds the state of the art (RANSAC, MSAC, GaU, MAGSAC): it stays nearly flat under threshold miscalibration where baselines degrade, reaches near-optimal accuracy from as few as two validation pairs where baselines need on the order of 100 times more, and tightens its prior regularization as validation data grows scarce.'
   bibtex: |
-    @article{pritts2026ransac,
-      title   = {RANSAC Scoring Done Right},
-      author  = {Pritts, James and Seegr{\"a}ber, Felix and K{\"o}ser, Kevin},
-      journal = {arXiv preprint arXiv:2606.27385},
-      year    = {2026}
+    @inproceedings{pritts2026ransac,
+      title     = {RANSAC Scoring Done Right},
+      author    = {Pritts, James and Seegr{\"a}ber, Felix and K{\"o}ser, Kevin},
+      booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+      year      = {2026},
+      eprint    = {2606.27385},
+      archivePrefix = {arXiv}
     }
 
 - id: dexheimer-icra22

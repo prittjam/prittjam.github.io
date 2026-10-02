@@ -1,6 +1,10 @@
 # Newest first. `item` may contain inline HTML (<em>, <strong>, <a>).
+- date: Sep 2026
+  item: 'Participated in the fishbowl discussion on <em>NextGen Perspectives</em> at the annual <a href="https://www.uni-kiel.de/en/research/priority-research-areas/kiel-marine-science" target="_blank" rel="noopener"><strong>Kiel Marine Science (KMS)</strong></a> Retreat.'
+- date: Sep 2026
+  item: '<a href="https://arxiv.org/abs/2606.27385" target="_blank" rel="noopener"><em>RANSAC Scoring Done Right</em></a> was accepted to <a href="https://neurips.cc/Conferences/2026" target="_blank" rel="noopener"><strong>NeurIPS 2026</strong></a>.'
 - date: Aug 2026
-  item: '<a href="https://blobboards.github.io/blobboards_bmvc2026.pdf" target="_blank" rel="noopener"><em>BlobBoards: Robust Markers for Accurate Pose</em></a> was accepted to <strong>BMVC 2026</strong>. See the <a href="https://blobboards.github.io" target="_blank" rel="noopener">project page</a>.'
+  item: '<a href="https://blobboards.github.io/blobboards_bmvc2026.pdf" target="_blank" rel="noopener"><em>BlobBoards: Robust Markers for Accurate Pose</em></a> was accepted to <a href="https://bmvc2026.bmva.org/" target="_blank" rel="noopener"><strong>BMVC 2026</strong></a>. See the <a href="https://blobboards.github.io" target="_blank" rel="noopener">project page</a>.'
 - date: Aug 2026
   item: 'Hendrik Sauer completed his M.Sc. thesis, <em>Affine-Equivariant Neural Networks for the Feature Matching Problem</em>.'
 - date: Jun 2026
