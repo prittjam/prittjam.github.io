@@ -31,7 +31,11 @@ layout: default
       <section id="news">
         <h2>News</h2>
         <ul class="news">
+          {%- comment -%} Only items from the last 12 months, measured at build time (each push). {%- endcomment -%}
+          {%- assign news_cutoff = site.time | date: "%s" | minus: 31536000 %}
           {%- for n in site.data.news %}
+          {%- assign news_time = "1 " | append: n.date | date: "%s" | plus: 0 %}
+          {%- if news_time < news_cutoff %}{% continue %}{% endif %}
           <li>
             <span class="date">{{ n.date }}</span>
             <span class="item">{{ n.item }}</span>
