@@ -1,5 +1,28 @@
 # Generated from doc/*.html fragments. Edit here; the site rebuilds on push.
 
+- id: localopt
+  title: 'Robust Local Optimization Done Right'
+  authors: 'J. Pritts, K. Köser'
+  venue: 'Asian Conference on Computer Vision (ACCV) 2026'
+  thumb: './img/papers/Pritts-ACCV26-thumb.jpg'
+  alt: 'Robust Local Optimization Done Right — accuracy versus pose perturbation for uniform-mixture, Welsch and Geman–McClure losses'
+  width: 640
+  height: 360
+  links:
+    - { label: 'pdf', href: 'https://arxiv.org/pdf/2610.05743' }
+    - { label: 'arXiv', href: 'https://arxiv.org/abs/2610.05743' }
+    - { label: 'project', href: 'https://localoptimizationdoneright.github.io/' }
+  abstract: 'RANSAC scoring and local optimization (LO) impose different robustness requirements, motivating the separation of hypothesis selection from refinement. We systematically isolate the effects of robust-loss shape, incorrectly specified inlier scales, and optimization strategy on essential matrix, fundamental matrix, and homography estimation. A profile-marginal score marginalizes the nuisance inlier scale and selects an inlier partition, from which we estimate the scale that sets the LO loss width; this makes LO robust to an inlier scale specified too large, whereas one specified too small degrades selection itself. Refinement needs gradient from correspondences the seed currently rejects: optimizers that reweight from current residuals stay pinned to their seed, whereas methods with broad basins recover strongly perturbed seeds yet degrade accurate score-selected hypotheses, so basin size alone is insufficient to assess RANSAC LO. Joint half-quadratic optimization balances the two and is the most consistent strategy across model classes. An optimizer matched to the profile-marginal score, which never decreases it, does not reach the best accuracy, challenging the prescription that scoring and refinement objectives should match. Composed from these findings, our RANSAC reduces the median essential-matrix pose error of a state-of-the-art RANSAC on PhotoTourism from 2.23° to 1.58° with a correctly specified inlier scale and from 38° to 6.2° when it is grossly misspecified (128× too large).'
+  bibtex: |
+    @inproceedings{pritts2026localopt,
+      title     = {Robust Local Optimization Done Right},
+      author    = {Pritts, James and K{\"o}ser, Kevin},
+      booktitle = {Asian Conference on Computer Vision (ACCV)},
+      year      = {2026},
+      eprint    = {2610.05743},
+      archivePrefix = {arXiv}
+    }
+
 - id: blobboards
   title: 'BlobBoards: Robust Markers for Accurate Pose'
   authors: 'J. Pritts, T. Sittart, H. Sauer, S. Janßen, F. Seegräber, D. Nakath, K. Köser'
@@ -40,29 +63,6 @@
       booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
       year      = {2026},
       eprint    = {2606.27385},
-      archivePrefix = {arXiv}
-    }
-
-- id: localopt
-  title: 'Robust Local Optimization Done Right'
-  authors: 'J. Pritts, K. Köser'
-  venue: 'Asian Conference on Computer Vision (ACCV) 2026'
-  thumb: './img/papers/Pritts-ACCV26-thumb.jpg'
-  alt: 'Robust Local Optimization Done Right — accuracy versus pose perturbation for uniform-mixture, Welsch and Geman–McClure losses'
-  width: 640
-  height: 360
-  links:
-    - { label: 'pdf', href: 'https://arxiv.org/pdf/2610.05743' }
-    - { label: 'arXiv', href: 'https://arxiv.org/abs/2610.05743' }
-    - { label: 'project', href: 'https://localoptimizationdoneright.github.io/' }
-  abstract: 'RANSAC scoring and local optimization (LO) impose different robustness requirements, motivating the separation of hypothesis selection from refinement. We systematically isolate the effects of robust-loss shape, incorrectly specified inlier scales, and optimization strategy on essential matrix, fundamental matrix, and homography estimation. A profile-marginal score marginalizes the nuisance inlier scale and selects an inlier partition, from which we estimate the scale that sets the LO loss width; this makes LO robust to an inlier scale specified too large, whereas one specified too small degrades selection itself. Refinement needs gradient from correspondences the seed currently rejects: optimizers that reweight from current residuals stay pinned to their seed, whereas methods with broad basins recover strongly perturbed seeds yet degrade accurate score-selected hypotheses, so basin size alone is insufficient to assess RANSAC LO. Joint half-quadratic optimization balances the two and is the most consistent strategy across model classes. An optimizer matched to the profile-marginal score, which never decreases it, does not reach the best accuracy, challenging the prescription that scoring and refinement objectives should match. Composed from these findings, our RANSAC reduces the median essential-matrix pose error of a state-of-the-art RANSAC on PhotoTourism from 2.23° to 1.58° with a correctly specified inlier scale and from 38° to 6.2° when it is grossly misspecified (128× too large).'
-  bibtex: |
-    @inproceedings{pritts2026localopt,
-      title     = {Robust Local Optimization Done Right},
-      author    = {Pritts, James and K{\"o}ser, Kevin},
-      booktitle = {Asian Conference on Computer Vision (ACCV)},
-      year      = {2026},
-      eprint    = {2610.05743},
       archivePrefix = {arXiv}
     }
 
