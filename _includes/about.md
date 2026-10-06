@@ -1,5 +1,5 @@
-James Pritts is a Marie Skłodowska-Curie Actions Fellow in the Marine Data
-Science group at Kiel University's Institute of Computer Science. His research
+James Pritts is a Marie Skłodowska-Curie Actions Fellow in the
+[Marine Data Science](https://www.marine-ai.de/) group at Kiel University's Institute of Computer Science. His research
 focuses on robust geometric estimation for computer vision, including
 RANSAC-based model fitting, camera calibration, and multi-view geometry, with
 applications ranging from conventional imagery to challenging underwater
