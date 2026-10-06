@@ -1,4 +1,6 @@
 # Newest first. `item` may contain inline HTML (<em>, <strong>, <a>).
+- date: Oct 2026
+  item: '<a href="https://arxiv.org/abs/2610.05743" target="_blank" rel="noopener"><em>Robust Local Optimization Done Right</em></a> was accepted to <a href="https://accv2026.org/" target="_blank" rel="noopener"><strong>ACCV 2026</strong></a>. See the <a href="https://localoptimizationdoneright.github.io/" target="_blank" rel="noopener">project page</a>.'
 - date: Sep 2026
   item: 'Participated in the fishbowl discussion on <em>NextGen Perspectives</em> at the annual <a href="https://www.uni-kiel.de/en/research/priority-research-areas/kiel-marine-science" target="_blank" rel="noopener"><strong>Kiel Marine Science (KMS)</strong></a> Retreat.'
 - date: Sep 2026
