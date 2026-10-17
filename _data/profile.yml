@@ -5,6 +5,6 @@ avatar: ./me.png
 avatar_width: 304
 avatar_height: 280
 affiliation:
-  - CAU Kiel
+  - { name: 'CAU Kiel', href: 'https://www.uni-kiel.de/en/' }
   - { name: 'Marine Data Science', href: 'https://www.marine-ai.de/' }
   - Marie Skłodowska-Curie (MSCA) Fellow

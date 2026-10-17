@@ -4,14 +4,14 @@ focuses on robust geometric estimation for computer vision, including
 RANSAC-based model fitting, camera calibration, and multi-view geometry, with
 applications ranging from conventional imagery to challenging underwater
 environments. He is a Kiel Marine Science Associate and a member of the
-European Laboratory for Learning and Intelligent Systems (ELLIS). His work has
+[European Laboratory for Learning and Intelligent Systems (ELLIS)](https://ellis.eu/). His work has
 received the ACCV 2018 Saburo Tsuji Best Paper Award and the IVCNZ 2013 Best
 Paper Award.
 
 Before joining Kiel University, he was an Assistant Professor at Ukrainian
 Catholic University, where he conducted research in 3D computer vision and
 helped establish the Ph.D. program in Applied Sciences. He previously worked at
-the Czech Institute of Informatics, Robotics and Cybernetics and at Facebook
+the [Czech Institute of Informatics, Robotics and Cybernetics (CIIRC)](https://www.ciirc.cvut.cz/) and at Facebook
 Reality Labs, where he developed geometric calibration methods for
 augmented-reality headsets and motion-capture systems.
 

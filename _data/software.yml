@@ -1,30 +1,13 @@
-# The toolkit, then its packages listed beneath it (drawn as a tree).
-# Icons are copied from visualgeometrytoolkit.github.io/icons.
-name: Visual Geometry Toolkit
-icon: './img/software/vgt_logo.svg'
-description: 'Julia packages for multi-view geometry: primitives, features, robust estimation, RANSAC scoring, evaluation, fiducial markers and calibration.'
-links:
-  - { label: 'project page', href: 'https://visualgeometrytoolkit.github.io/' }
-  - { label: 'code', href: 'https://github.com/VisualGeometryToolkit' }
-packages:
-  - name: BlobBoards.jl
-    icon: './img/software/blobboards.svg'
-    description: 'A standalone application for blob marker boards: author printable boards, detect and identify them in images, and estimate their pose from hundreds of blob correspondences.'
-    note: 'Code for <em>BlobBoards: Robust Markers for Accurate Pose</em> (BMVC 2026).'
-    links:
-      - { label: 'project page', href: 'https://blobboards.github.io' }
-      - { label: 'code', href: 'https://github.com/VisualGeometryToolkit/BlobBoards.jl' }
-  - name: RansacScoring<wbr>DoneRight.jl
-    icon: './img/software/rsdr.svg'
-    description: 'Scale-free marginal RANSAC scoring with CPU and GPU evaluators.'
-    note: 'Code for <em>RANSAC Scoring Done Right</em> (NeurIPS 2026).'
-    links:
-      - { label: 'project page', href: 'https://ransacscoringdoneright.github.io/' }
-      - { label: 'code', href: 'https://github.com/VisualGeometryToolkit/RansacScoringDoneRight.jl' }
-  - name: LocalOptimization<wbr>DoneRight.jl
-    icon: './img/software/lodr.svg'
-    description: 'Refit, score and compare local-optimization strategies for two-view estimation.'
-    note: 'Code for <em>Robust Local Optimization Done Right</em> (ACCV 2026).'
-    links:
-      - { label: 'project page', href: 'https://localoptimizationdoneright.github.io/' }
-      - { label: 'code', href: 'https://github.com/VisualGeometryToolkit/LocalOptimizationDoneRight.jl' }
+# Shown as cards side by side. Icons are copied from visualgeometrytoolkit.github.io/icons.
+- name: Visual Geometry Toolkit
+  icon: './img/software/vgt_logo.svg'
+  description: 'Julia packages for multi-view geometry: primitives, features, robust estimation, RANSAC scoring, evaluation, fiducial markers and calibration.'
+  links:
+    - { label: 'project', href: 'https://visualgeometrytoolkit.github.io/' }
+    - { label: 'code', href: 'https://github.com/VisualGeometryToolkit' }
+- name: BlobBoards
+  icon: './img/software/blobboards.svg'
+  description: 'A standalone application for blob marker boards: author printable boards, detect and identify them in images, and estimate their pose from hundreds of blob correspondences.'
+  links:
+    - { label: 'project', href: 'https://blobboards.github.io' }
+    - { label: 'code', href: 'https://github.com/VisualGeometryToolkit/BlobBoards.jl' }

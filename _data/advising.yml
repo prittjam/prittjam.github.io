@@ -1,55 +1,55 @@
-# Grouped by degree. Each student: name, optional url (links the name),
-# institution, optional year (omit for work-in-progress), thesis,
-# optional wip flag.
-- heading: M.Sc. Students
+# Grouped by institution (most recent first). Each student: name, optional url
+# (links the name), degree, optional year (omit for work in progress), thesis,
+# optional wip flag. Within a group: work in progress first, then newest first.
+- institution: Kiel University
   students:
     - name: Ties Harder
-      institution: Kiel University
+      degree: M.Sc.
       thesis: Boundary Movement Aware Differentiable Rendering for Visual Calibration Tasks
       wip: true
     - name: Philipp Böll
-      institution: Kiel University
+      degree: M.Sc.
       thesis: Underwater Light Rig Auto-Calibration from Asynchronous Cameras
       wip: true
     - name: Hendrik Sauer
-      institution: Kiel University
+      degree: M.Sc.
       year: 2026
       thesis: Affine-Equivariant Neural Networks for the Feature Matching Problem
     - name: Till Sittart
-      institution: Kiel University
+      degree: M.Sc.
       year: 2026
       thesis: Affine-Equivariant Blob Targets for Robust Absolute Pose in Robotics
     - name: Liam Boddin
-      institution: Kiel University
+      degree: M.Sc.
       year: 2025
       thesis: Underwater Calibration of Near-point Anisotropic Lights
+- institution: Ukrainian Catholic University
+  students:
     - name: Igor Babin
-      institution: Ukrainian Catholic University
+      degree: M.Sc.
       year: 2024
       thesis: Image Inpainting in Latent Space
+    - name: Yaroslav Romanus
+      degree: B.Sc.
+      year: 2024
+      thesis: Applying Motion in Latent Space
     - name: Dmytro Nadobko
-      institution: Ukrainian Catholic University
+      degree: M.Sc.
       year: 2023
       thesis: Supervised Learning of Correspondence Volumes for Coplanar Repetitive Patterns
     - name: Andrii Stadnik
-      institution: Ukrainian Catholic University
+      degree: M.Sc.
       year: 2023
       thesis: Corner Localization and Camera Calibration from Imaged Lattices
-    - name: Yaroslava Lochman
-      institution: Ukrainian Catholic University
-      year: 2020
-      thesis: Minimal Solvers for Single-View Auto-Calibration
-- heading: B.Sc. Students
-  students:
-    - name: Yaroslav Romanus
-      institution: Ukrainian Catholic University
-      year: 2024
-      thesis: Applying Motion in Latent Space
     - name: Ostap Viniavskyi
-      institution: Ukrainian Catholic University
+      degree: B.Sc.
       year: 2021
       thesis: Learning Discriminative Context-Aware Keypoints Representations for Resolving Ambiguous Matches
     - name: Kostiantyn Liepieshov
-      institution: Ukrainian Catholic University
+      degree: B.Sc.
       year: 2021
       thesis: Manhattan-Frame Detection in Lens-Distorted Images
+    - name: Yaroslava Lochman
+      degree: M.Sc.
+      year: 2020
+      thesis: Minimal Solvers for Single-View Auto-Calibration
