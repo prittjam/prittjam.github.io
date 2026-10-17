@@ -2,7 +2,7 @@
 - date: Oct 2026
   item: 'Released <a href="https://github.com/VisualGeometryToolkit/BlobBoards.jl" target="_blank" rel="noopener"><strong>BlobBoards</strong></a>, the world&#39;s most robust and accurate fiducial marker. See the <a href="https://arxiv.org/abs/2608.28830" target="_blank" rel="noopener">paper</a> and <a href="https://blobboards.github.io" target="_blank" rel="noopener">project page</a>.'
 - date: Oct 2026
-  item: 'Released <a href="https://github.com/VisualGeometryToolkit" target="_blank" rel="noopener"><strong>VisualGeometryToolkit</strong></a>, an optimization and geometry framework for Julia. See the <a href="https://visualgeometrytoolkit.github.io/" target="_blank" rel="noopener">project page</a>.'
+  item: 'Released <a href="https://github.com/VisualGeometryToolkit" target="_blank" rel="noopener"><strong>VisualGeometryToolkit</strong></a>, an optimization and geometry framework for Julia. See <a href="https://visualgeometrytoolkit.github.io/#publications" target="_blank" rel="noopener">related papers</a>.'
 - date: Oct 2026
   item: '<a href="https://arxiv.org/abs/2610.05743" target="_blank" rel="noopener"><em>Robust Local Optimization Done Right</em></a> was accepted to <a href="https://accv2026.org/" target="_blank" rel="noopener"><strong>ACCV 2026</strong></a>. See the <a href="https://localoptimizationdoneright.github.io/" target="_blank" rel="noopener">project page</a>.'
 - date: Sep 2026
