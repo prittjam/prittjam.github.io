@@ -285,6 +285,59 @@ details.pub-more[open] > summary { font-weight: 600; }
 .copy-btn[data-state="copied"] .icon-done { display: block; }
 .copy-btn[data-state="failed"] { color: #b5842a; border-color: #b5842a; }
 
+/* ---- software ----
+   The toolkit heads the box; its packages hang off a connector line drawn
+   down from the logo, mirroring the toolkit's own dependency graph. */
+.sw {
+  --root: 64px;
+  --stub: 22px;
+  --tree: color-mix(in srgb, var(--muted) 45%, transparent);
+  padding: 22px 22px 6px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+}
+.sw-head { display: grid; grid-template-columns: var(--root) 1fr; column-gap: 18px; }
+.sw-root { display: flex; flex-direction: column; align-items: center; }
+.sw-root img { width: var(--root); height: var(--root); display: block; }
+.sw-root::after { content: ""; flex: 1; width: 1px; margin: 6px 0 0 calc(var(--root) / 2); align-self: flex-start; background: var(--tree); }
+.sw-body { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.sw h3 { margin: 0; font-family: var(--serif); font-size: 1.25rem; font-weight: 600; }
+.sw h4 { margin: 0; font-size: 0.98rem; font-weight: 600; }
+.sw .desc { margin: 0; color: var(--text); font-size: 0.93rem; }
+.sw .note { margin: 0; color: var(--muted); font-size: 0.88rem; }
+.sw .links { margin: 2px 0 0; display: flex; gap: 14px; flex-wrap: wrap; font-size: 0.9rem; font-weight: 600; }
+.sw-head .links { padding-bottom: 6px; }
+
+.sw-pkgs { list-style: none; margin: 0; padding: 0 0 0 calc(var(--root) / 2); }
+.sw-pkgs li {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  column-gap: 14px;
+  padding: 14px 0 16px calc(var(--stub) + 4px);
+}
+.sw-pkgs li img { width: 40px; height: 40px; display: block; }
+/* elbow from the trunk to this package's icon */
+.sw-pkgs li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0;
+  width: var(--stub);
+  height: 34px;
+  border-left: 1px solid var(--tree);
+  border-bottom: 1px solid var(--tree);
+  border-bottom-left-radius: 8px;
+}
+/* trunk continues past every package but the last (starting below the
+   elbow, so the translucent lines don't overlap and darken) */
+.sw-pkgs li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 0; top: 26px; bottom: 0;
+  border-left: 1px solid var(--tree);
+}
+
 /* ---- awards ---- */
 .award-grid {
   display: grid;
@@ -393,6 +446,11 @@ footer {
   header.hero { flex-direction: column; text-align: center; gap: 18px; padding-top: 40px; }
   .social { justify-content: center; }
   .pub { flex-direction: column; gap: 12px; }
+  .sw { --root: 48px; --stub: 14px; padding: 18px 16px 4px; }
+  .sw-head { column-gap: 14px; }
+  .sw-pkgs li { grid-template-columns: 32px 1fr; column-gap: 12px; }
+  .sw-pkgs li img { width: 32px; height: 32px; }
+  .sw-pkgs li::before { height: 30px; }
   .pub .thumb, .pub .thumb img { width: 100%; max-width: 260px; }
   ul.news li { flex-direction: column; gap: 2px; }
   ul.news .date { flex-basis: auto; }

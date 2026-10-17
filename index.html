@@ -52,6 +52,35 @@ layout: default
         {%- endfor %}
       </section>
 
+      <!-- ================= SOFTWARE ================= -->
+      <section id="software">
+        <h2>Software</h2>
+        {%- assign sw = site.data.software %}
+        <div class="sw">
+          <div class="sw-head">
+            <div class="sw-root"><img src="{{ sw.icon }}" alt="" width="64" height="64" loading="lazy"></div>
+            <div class="sw-body">
+              <h3>{{ sw.name }}</h3>
+              <p class="desc">{{ sw.description }}</p>
+              <p class="links">{% for l in sw.links %}<a href="{{ l.href }}" target="_blank" rel="noopener">{{ l.label }}</a>{% endfor %}</p>
+            </div>
+          </div>
+          <ul class="sw-pkgs">
+            {%- for pkg in sw.packages %}
+            <li>
+              <img src="{{ pkg.icon }}" alt="" width="40" height="40" loading="lazy">
+              <div class="sw-body">
+                <h4>{{ pkg.name }}</h4>
+                <p class="desc">{{ pkg.description }}</p>
+                <p class="note">{{ pkg.note }}</p>
+                <p class="links">{% for l in pkg.links %}<a href="{{ l.href }}" target="_blank" rel="noopener">{{ l.label }}</a>{% endfor %}</p>
+              </div>
+            </li>
+            {%- endfor %}
+          </ul>
+        </div>
+      </section>
+
       <!-- ================= AWARDS ================= -->
       <section id="awards">
         <h2>Awards</h2>
