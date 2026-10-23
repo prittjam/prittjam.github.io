@@ -3,14 +3,14 @@
 # optional wip flag. Within a group: work in progress first, then newest first.
 - institution: Kiel University
   students:
-    - name: Ties Harder
-      degree: M.Sc.
-      thesis: Boundary Movement Aware Differentiable Rendering for Visual Calibration Tasks
-      wip: true
     - name: Philipp Böll
       degree: M.Sc.
       thesis: Underwater Light Rig Auto-Calibration from Asynchronous Cameras
       wip: true
+    - name: Ties Harder
+      degree: M.Sc.
+      year: 2026
+      thesis: Boundary Movement Aware Differentiable Rendering for Visual Calibration Tasks
     - name: Hendrik Sauer
       degree: M.Sc.
       year: 2026

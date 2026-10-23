@@ -1,5 +1,7 @@
 # Newest first. `item` may contain inline HTML (<em>, <strong>, <a>).
 - date: Oct 2026
+  item: 'Ties Harder completed his M.Sc. thesis, <em>Boundary Movement Aware Differentiable Rendering for Visual Calibration Tasks</em>.'
+- date: Oct 2026
   item: 'Released <a href="https://github.com/VisualGeometryToolkit/BlobBoards.jl" target="_blank" rel="noopener"><strong>BlobBoards</strong></a>, the world&#39;s most robust and accurate fiducial marker. See the <a href="https://arxiv.org/abs/2608.28830" target="_blank" rel="noopener">paper</a> and <a href="https://blobboards.github.io" target="_blank" rel="noopener">project page</a>.'
 - date: Oct 2026
   item: 'Released <a href="https://github.com/VisualGeometryToolkit" target="_blank" rel="noopener"><strong>VisualGeometryToolkit</strong></a>, an optimization and geometry framework for Julia. See <a href="https://visualgeometrytoolkit.github.io/#publications" target="_blank" rel="noopener">related papers</a>.'
