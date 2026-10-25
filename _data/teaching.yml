@@ -1,17 +1,29 @@
-# Each course: course (the title), institution, level (M.Sc. / B.Sc.),
-# role, years. Dashes: – (en) between years.
-- course: 3D Computer Vision
-  institution: Kiel University
-  level: M.Sc.
-  role: Substitute Instructor
-  years: 2025 – 2026
-- course: Image Retrieval
-  institution: Ukrainian Catholic University
-  level: M.Sc.
-  role: Instructor
-  years: 2017 – 2018
-- course: Pattern Recognition and Machine Learning
-  institution: Czech Technical University in Prague
-  level: B.Sc.
-  role: TA
-  years: 2013 – 2016
+# Grouped by institution (most recent first). Each course: course (the
+# title), level (M.Sc. / B.Sc.), role, years. Within a group: newest first.
+# Dashes: – (en) between years.
+- institution: Kiel University
+  courses:
+    - course: 3D Computer Vision
+      level: M.Sc.
+      role: Substitute Instructor
+      years: 2025 – 2026
+- institution: Ukrainian Catholic University
+  courses:
+    - course: 3D Computer Vision
+      level: M.Sc.
+      role: Instructor
+      years: 2023
+    - course: Computer Vision
+      level: M.Sc.
+      role: Guest Lecturer
+      years: 2022
+    - course: Image Retrieval
+      level: M.Sc.
+      role: Instructor
+      years: 2017
+- institution: Czech Technical University in Prague
+  courses:
+    - course: Pattern Recognition and Machine Learning
+      level: B.Sc.
+      role: TA
+      years: 2013 – 2016

@@ -355,10 +355,9 @@ details.pub-more[open] > summary { font-weight: 600; }
   .advisees .thesis { grid-column: 2 / -1; grid-row: 2; }
 }
 
-/* teaching: one row per course, ruled like the advising rows */
+/* teaching: one row per course, ruled like the advising rows; institution is the group heading */
 .courses { list-style: none; margin: 0; padding: 0; }
-.courses li { padding: 10px 0; border-bottom: 1px solid var(--border); }
-.courses li:last-child { border-bottom: none; }
+.courses li { padding: 10px 0; border-top: 1px solid var(--border); }
 .courses p { margin: 0; }
 .courses .head { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; }
 .courses .name { font-weight: 600; }

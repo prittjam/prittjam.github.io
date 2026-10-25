@@ -104,12 +104,15 @@ layout: default
       <!-- ================= TEACHING ================= -->
       <section id="teaching">
         <h2>Teaching</h2>
+        {%- for g in site.data.teaching %}
+        <h3 class="subhead">{{ g.institution }}</h3>
         <ul class="courses">
-          {%- for c in site.data.teaching %}
+          {%- for c in g.courses %}
           <li>
             <p class="head"><span class="name">{{ c.course }}</span><span class="year">{{ c.years }}</span></p>
-            <p class="meta"><em>{{ c.role }}</em>, {{ c.institution }}, {{ c.level }}</p>
+            <p class="meta"><em>{{ c.role }}</em>, {{ c.level }}</p>
           </li>
           {%- endfor %}
         </ul>
+        {%- endfor %}
       </section>
