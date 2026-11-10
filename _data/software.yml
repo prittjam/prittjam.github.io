@@ -5,6 +5,7 @@
   links:
     - { label: 'project', href: 'https://visualgeometrytoolkit.github.io/' }
     - { label: 'code', href: 'https://github.com/VisualGeometryToolkit' }
+    - { label: 'doi', href: 'https://doi.org/10.5281/zenodo.23548372' }
 - name: BlobBoards
   icon: './img/software/blobboards.svg'
   description: 'A standalone application for blob marker boards: author printable boards, detect and identify them in images, and estimate their pose from hundreds of blob correspondences.'
