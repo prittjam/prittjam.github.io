@@ -418,3 +418,5 @@ footer {
   ul.news li { flex-direction: column; gap: 2px; }
   ul.news .date { flex-basis: auto; }
 }
+
+.pub-bib { margin: -0.5em 0 1em; font-size: 0.9em; }

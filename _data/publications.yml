@@ -111,7 +111,7 @@
 
 - id: lochman-wacv21
   title: 'Minimal Solvers for Single-View Lens-Distorted Camera Auto-Calibration'
-  authors: 'Y. Lochman, O. Dobosevych, R. Hyrniv, J. Pritts'
+  authors: 'Y. Lochman, O. Dobosevych, R. Hryniv, J. Pritts'
   venue: 'Winter Conference on Applications of Computer Vision (WACV) 2021'
   thumb: './img/papers/Lochman-WACV21-thumb.jpg'
   alt: ''
