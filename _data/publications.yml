@@ -1,5 +1,25 @@
 # Generated from doc/*.html fragments. Edit here; the site rebuilds on push.
 
+- id: radiometric
+  title: 'Real Cameras are Radiometric'
+  authors: 'T. Harder, F. Seegräber, D. Nakath, H. Sauer, K. Köser, J. Pritts'
+  venue: 'arXiv preprint arXiv:2611.25265, 2026'
+  thumb: './img/papers/Harder-arXiv26-thumb.jpg'
+  alt: 'Real Cameras are Radiometric — panorama without and with vignetting correction, and a texture learned from defocused images'
+  width: 640
+  height: 360
+  links:
+    - { label: 'pdf', href: 'https://arxiv.org/pdf/2611.25265' }
+    - { label: 'arXiv', href: 'https://arxiv.org/abs/2611.25265' }
+  abstract: 'We propose the radiometric camera, a model that lifts any central geometric camera model to a radiometric one. The lifted model keeps the projection of the geometric model and adds a finite aperture, a free-form focus surface and a generic vignetting function. We calibrate it by inverse rendering directly on the relative irradiance of the sensor, from the same images of standard calibration targets used in geometric calibration. Geometric calibration absorbs the bias of its feature detections. The proposed radiometric calibration uses no features, and our radiometric cameras have lower reprojection errors on held-out test sets. The focus surface extends defocus modeling from the thin lens to any central camera, and we use it in a first multi-view radiometric reconstruction, which recovers the in-focus reflectance of a texture from defocused images. The vignetting is estimated jointly and accurately reproduces a flat field measured through a diffuser. Because every standard camera model lifts to a radiometric one, the radiometric camera naturally and directly extends generative scene models beyond multi-view geometry to multi-view radiometric ones, where phenomena such as lighting and attenuation can be accurately estimated.'
+  bibtex: |
+    @article{harder2026radiometric,
+      title   = {Real Cameras are Radiometric},
+      author  = {Harder, Ties and Seegr{\"a}ber, Felix and Nakath, David and Sauer, Hendrik and K{\"o}ser, Kevin and Pritts, James},
+      journal = {arXiv preprint arXiv:2611.25265},
+      year    = {2026}
+    }
+
 - id: localopt
   title: 'Robust Local Optimization Done Right'
   authors: 'J. Pritts, K. Köser'
