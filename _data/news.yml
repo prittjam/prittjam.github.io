@@ -1,6 +1,8 @@
 # Newest first. `item` may contain inline HTML (<em>, <strong>, <a>).
 - date: Nov 2026
   item: 'New preprint: <em>Real Cameras are Radiometric</em> is on <a href="https://arxiv.org/abs/2611.25265" target="_blank" rel="noopener">arXiv</a>. See the <a href="https://realcamerasareradiometric.github.io/" target="_blank" rel="noopener">project page</a>.'
+- date: Nov 2026
+  item: 'Philipp Böll completed his M.Sc. thesis, <em>Light Rig Auto-Calibration: Estimating the Light Rig Pose from Imaged Circular Lights</em>.'
 - date: Oct 2026
   item: 'Ties Harder completed his M.Sc. thesis, <em>Boundary Movement Aware Differentiable Rendering for Visual Calibration Tasks</em>.'
 - date: Oct 2026

@@ -5,8 +5,8 @@
   students:
     - name: Philipp Böll
       degree: M.Sc.
-      thesis: Underwater Light Rig Auto-Calibration from Asynchronous Cameras
-      wip: true
+      year: 2026
+      thesis: 'Light Rig Auto-Calibration: Estimating the Light Rig Pose from Imaged Circular Lights'
     - name: Ties Harder
       degree: M.Sc.
       year: 2026
