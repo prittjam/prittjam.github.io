@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+<!-- VisualRadiometryToolkit: a lens aperture of seven blades, the iris of the title banner's eye; the light a
+     camera collects passes through it. Written by site/tools/make_icons.py. -->
+<circle cx="256" cy="256" r="250" fill="#2a0709"/>
+<circle cx="256" cy="256" r="228" fill="#9a1d16"/>
+<polygon points="346.0,275.2 421.3,413.1 409.1,425.0 396.0,436.0 382.2,445.9 367.6,454.8 352.5,462.6 336.7,469.2 320.6,474.7 304.1,478.9 287.3,481.8 270.3,483.6 253.3,484.0 236.2,483.1 297.1,338.3" fill="#5a0d12" stroke="#ff6a46" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="297.1,338.3 236.2,483.1 219.3,481.0 202.6,477.7 186.2,473.0 170.2,467.2 154.6,460.2 139.6,452.1 125.3,442.8 111.7,432.5 98.9,421.3 87.0,409.1 76.0,396.0 66.1,382.2 217.3,339.5" fill="#3a0808" stroke="#ff6a46" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="217.3,339.5 66.1,382.2 57.2,367.6 49.4,352.5 42.8,336.7 37.3,320.6 33.1,304.1 30.2,287.3 28.4,270.3 28.0,253.3 28.9,236.2 31.0,219.3 34.3,202.6 39.0,186.2 166.6,277.8" fill="#5a0d12" stroke="#ff6a46" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="166.6,277.8 39.0,186.2 44.8,170.2 51.8,154.6 59.9,139.6 69.2,125.3 79.5,111.7 90.7,98.9 102.9,87.0 116.0,76.0 129.8,66.1 144.4,57.2 159.5,49.4 175.3,42.8 183.3,199.7" fill="#3a0808" stroke="#ff6a46" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="183.3,199.7 175.3,42.8 191.4,37.3 207.9,33.1 224.7,30.2 241.7,28.4 258.7,28.0 275.8,28.9 292.7,31.0 309.4,34.3 325.8,39.0 341.8,44.8 357.4,51.8 372.4,59.9 254.7,164.0" fill="#5a0d12" stroke="#ff6a46" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="254.7,164.0 372.4,59.9 386.7,69.2 400.3,79.5 413.1,90.7 425.0,102.9 436.0,116.0 445.9,129.8 454.8,144.4 462.6,159.5 469.2,175.3 474.7,191.4 478.9,207.9 481.8,224.7 327.1,197.6" fill="#3a0808" stroke="#ff6a46" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="327.1,197.6 481.8,224.7 483.6,241.7 484.0,258.7 483.1,275.8 481.0,292.7 477.7,309.4 473.0,325.8 467.2,341.8 460.2,357.4 452.1,372.4 442.8,386.7 432.5,400.3 421.3,413.1 346.0,275.2" fill="#5a0d12" stroke="#ff6a46" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="346.0,275.2 297.1,338.3 217.3,339.5 166.6,277.8 183.3,199.7 254.7,164.0 327.1,197.6" fill="#050101" stroke="#ff6a46" stroke-width="5" stroke-linejoin="round"/>
+<circle cx="256" cy="256" r="228" fill="none" stroke="#2a0709" stroke-width="10"/>
+<circle cx="172" cy="164" r="26" fill="#fff6ef" fill-opacity="0.9"/>
+</svg>

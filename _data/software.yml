@@ -1,4 +1,4 @@
-# Shown as cards side by side. Icons are copied from visualgeometrytoolkit.github.io/icons.
+# Shown as cards side by side. Icons are copied from the toolkits' sites (visualgeometrytoolkit.github.io/icons, visualradiometrytoolkit.github.io/site/icons).
 - name: Visual Geometry Toolkit
   icon: './img/software/vgt_logo.svg'
   description: 'Julia packages for multi-view geometry: primitives, features, robust estimation, RANSAC scoring, evaluation, fiducial markers and calibration.'
@@ -6,6 +6,12 @@
     - { label: 'project', href: 'https://visualgeometrytoolkit.github.io/' }
     - { label: 'code', href: 'https://github.com/VisualGeometryToolkit' }
     - { label: 'doi', href: 'https://doi.org/10.5281/zenodo.23548372' }
+- name: Visual Radiometry Toolkit
+  icon: './img/software/vrt_logo.svg'
+  description: 'Julia packages for radiometric camera models: vignetting, aperture and focus as types that lift the cameras of the Visual Geometry Toolkit, with the scene they see and its file formats.'
+  links:
+    - { label: 'project', href: 'https://visualradiometrytoolkit.github.io/' }
+    - { label: 'code', href: 'https://github.com/VisualRadiometryToolkit' }
 - name: BlobBoards
   icon: './img/software/blobboards.svg'
   description: 'A standalone application for blob marker boards: author printable boards, detect and identify them in images, and estimate their pose from hundreds of blob correspondences.'
